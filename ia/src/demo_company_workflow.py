@@ -357,7 +357,7 @@ def calculate(root, include_reference=False):
         for relative in before['sources']:
             dest = stage / relative
             dest.parent.mkdir(parents=True, exist_ok=True)
-            os.link(root / relative, dest)
+            shutil.copyfile(root / relative, dest)
         if unchanged:
             # Copy, never hardlink mutable results. Failed cost/report refreshes
             # must not alter the last completed set, including the cache path.

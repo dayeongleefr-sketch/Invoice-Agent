@@ -72,7 +72,7 @@
     "ia/src/demo_company_case_runtime.py": "39c6d8807e22e6fe5a1ea59634cdf7228efea8830d88143d657b7ff4ea796d86",
     "ia/src/demo_company_material_registry.py": "4a09633733e1a9cf62395252058b8dd9163b2db8719267d266e1ae7b9a9cc123",
     "ia/src/demo_company_revision_impact.py": "0eeb9a3d3f051f853718ddb42ae369d0e8f6d3fb0daf38d68b0e131cb3358925",
-    "ia/src/demo_company_workflow.py": "95aa3267eedce90c36dc22a9a4a83805838eb865910e9fc96ef95df8b9f43d89",
+    "ia/src/demo_company_workflow.py": "e3a9e8494be6fbac671cd07bc454ab309ba3eb3b4c37e8a1835b718513fc31ed",
     "ia/src/document_layouts.py": "cf7a35f5fbff685a1f8ebdfb2a88389d81d4a9b396cb0085677d9a74479d5185",
     "ia/src/expression_functions.py": "8c1c41e178851a78edac1d0011212982fa11fd0b3c9034c847f5b4e8b34d9245",
     "ia/src/financial_coverage.py": "51a3364e451c5b6a3814443a6310a51e7dd6536b4074bdc72239402895a7a9ba",
