@@ -23,13 +23,14 @@
     "available": 56,
     "scope": "cross-platform pip dry run; Docker build not run locally"
   },
-  "github_uploaded": false,
-  "render_deployed": false,
-  "public_url": null,
+  "github_uploaded": true,
+  "render_deployed": true,
+  "public_url": "https://invoice-agent-demo-bj7i.onrender.com",
   "limits": [
-    "GitHub and Render account integrations not confirmed.",
-    "No Docker runtime on current Windows host.",
-    "Real Linux container/HTTPS acceptance pending.",
-    "Free instance is for sample experience; restarts do not preserve personal records."
-  ]
+    "Included synthetic data only; no visitor uploads or AI calls.",
+    "Free server can sleep; local files are ephemeral.",
+    "The browser test is agent acceptance; user walkthrough is optional and not yet confirmed."
+  ],
+  "local_checks_scope": "Original Windows package regression; live Linux/HTTPS checks are in DEPLOYMENT.json.",
+  "live_deployment": "DEPLOYMENT.json"
 }

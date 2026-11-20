@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-20",
+  "url": "https://invoice-agent-demo-bj7i.onrender.com",
+  "repository": "https://github.com/dayeongleefr-sketch/Invoice-Agent",
+  "workspace": "Invoice agent",
+  "service_id": "srv-dc0224p42hec738esu10",
+  "plan": "free",
+  "region": "singapore",
+  "runtime": "docker",
+  "ai_enabled": false,
+  "synthetic_only": true,
+  "auto_deploy": false,
+  "live_commit": "80498bd49f1a89d08de78b19c414f6d4dae6cee1",
+  "deploy_id": "dep-dc023h7lk1mc73c6d8dg",
+  "status": "live",
+  "live_at_utc": "2026-11-20T10:33:26.103092Z",
+  "https_checks": {
+    "url": "https://invoice-agent-demo-bj7i.onrender.com",
+    "anonymous_browser": true,
+    "javascript_errors": [],
+    "https_health": {
+      "status": "ok",
+      "ai_enabled": false,
+      "data": "synthetic"
+    },
+    "dashboard": true,
+    "visitor_upload_absent": true,
+    "dashboard_amount": "0.00\n억원",
+    "recalculation_seconds": 6.58,
+    "actual_python_recalculation": true,
+    "calculation_status": "계산 완료 · 미확정 항목은 결과에 남아 있습니다.",
+    "recalculation_cooldown": true,
+    "report": true,
+    "checklist_detail": true,
+    "source_preview": true,
+    "download_boundary": true,
+    "foreign_origin_blocked": true,
+    "passed": true
+  },
+  "first_deploy_fix": "Copy sample sources instead of cross-filesystem hard links; original source hashes remain checked.",
+  "limitations": [
+    "Included synthetic data only; no visitor uploads or AI calls.",
+    "Free server can sleep; local files are ephemeral.",
+    "The browser test is agent acceptance; user walkthrough is optional and not yet confirmed."
+  ]
+}

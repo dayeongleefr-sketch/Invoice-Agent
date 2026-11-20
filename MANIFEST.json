@@ -11,6 +11,7 @@
     "data/demo_company/source/master_reply.xlsx": "2a4baf6c99fa4a098a32b42f4241ad017407a1b6f14dc3090ec02f5f59d449b7",
     "data/demo_company/source/outbound_h1.xlsx": "85693c9ef55cb8b93fc87dd0046452df7c91e1be0404a21c680b28a23ec6320e",
     "data/demo_company/source/outbound_july.csv": "3b7ed1851cbd857314ae51505d89e0de39f55802b950b2551eebb95b593ad6f0",
+    "DEPLOYMENT.json": "e7e1cb7924b93d88c1d6379b4dfb227964079d9d3b755a3f6ff766a2718fcdfe",
     "Dockerfile": "2abd4c5dfc97dc9261865a8833de93e3a1738f1045dd3bf2d36c3f4300f59897",
     "frontend/agent_adapter.py": "3eebae4c1a475a28769751d71c29485166879426e4dcf5261e918a5e5f3ec9ad",
     "frontend/app.py": "877cdf01fce9158d8233e2129394704842db4ab687ea6a8a729c03155bdc6229",
@@ -124,11 +125,11 @@
     "ia/src/workbook_observations.py": "c13a4fd674244fc186460ac3619ef4b389b32d2268a33cd9072c7dd1e50bcfd7",
     "ia/src/xlsb_scan.py": "a398b8f111adb9f37f69c50e1c370888047f6159a46f53134002109c4238c0b1",
     "portable.py": "64d41930cf97cabd23dbea195b703c8fec1c0413830da8b9e7fde8df11d247f1",
-    "README.md": "a5c53aa1900c1de1afa60ea9fe51fd107c3d49bc0902218334ac337b8ada27ef",
+    "README.md": "908b187be035bf1363efd050590e3c3f82910e9ce35c3fbcfef7a31addf0345c",
     "render.yaml": "0d2b7d846c288b6857bd4b3318f4b867e23faf4db69ee686c29e8dbd0633da1a",
     "requirements.txt": "79ae879f42eeef2302b7aaeb1b8ff10614920ae8bb495bb435fde321ffbb2855",
     "server.py": "c41e57db4fe33481d62d186bb735942e019961904ce605c4382b8e0ba265ef63",
-    "VALIDATION.json": "7d69da73dfbe5f219ed2dd51e1d38c942b4547c95b04b305c003ef2fad90ab14"
+    "VALIDATION.json": "3d2a3efdc28e87a540f910c96fb970a42ca69c3e5ce180c75622b111404af35f"
   },
   "synthetic_only": true,
   "ai_enabled": false,
