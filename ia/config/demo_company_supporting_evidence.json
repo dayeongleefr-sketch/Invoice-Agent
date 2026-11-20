@@ -1,0 +1,17 @@
+{
+  "schema_version": "1",
+  "enabled": false,
+  "company_id": "demo_company",
+  "warehouse_id": "demo_center",
+  "invoice_month": "2029-07",
+  "claim_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+  "period": {
+    "state": "confirmed_by_user",
+    "start": "2029-06-26",
+    "end": "2029-07-25",
+    "origin": "synthetic_example_policy_not_customer_approval"
+  },
+  "decision": {},
+  "entries": [],
+  "stated_rate_decision": {}
+}

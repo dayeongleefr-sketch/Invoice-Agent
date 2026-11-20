@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: logistics-agent-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    envVars:
+      - key: DEMO_DISABLE_AI
+        value: "1"

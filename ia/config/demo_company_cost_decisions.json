@@ -1,0 +1,15 @@
+{
+  "schema_version": "1",
+  "company_id": "demo_company",
+  "warehouse_id": "demo_center",
+  "invoice_month": "2029-07",
+  "origin": "synthetic_example_policy_not_customer_approval",
+  "b2c_charges": {
+    "source_hashes": {
+      "claim": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+      "outbound_july": "3B7ED1851CBD857314AE51505D89E0DE39F55802B950B2551EEBB95B593AD6F0",
+      "outbound_h1": "85693C9EF55CB8B93FC87DD0046452DF7C91E1BE0404A21C680B28A23EC6320E"
+    },
+    "state": "unconfirmed"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "company_id": "demo_company",
+  "warehouse_id": "demo_center",
+  "sources": {
+    "claim": {
+      "path": "data/demo_company/source/claim.xlsx",
+      "sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610"
+    },
+    "claim_summary": {
+      "path": "data/demo_company/source/claim_summary.xlsx",
+      "sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610"
+    },
+    "inbound_h1": {
+      "path": "data/demo_company/source/inbound_h1.xlsx",
+      "sha256": "2E2B441EF32B3D2B42A8A4BD382D15606FBCC7244F811778089A289FA5A590DD"
+    },
+    "outbound_h1": {
+      "path": "data/demo_company/source/outbound_h1.xlsx",
+      "sha256": "85693C9EF55CB8B93FC87DD0046452DF7C91E1BE0404A21C680B28A23EC6320E"
+    },
+    "inbound_july": {
+      "path": "data/demo_company/source/inbound_july.xlsx",
+      "sha256": "9544A483C79AC4EAEAF39A306015BBC0042E2EED52B502EC89B5BCDE1C966DA0"
+    },
+    "outbound_july": {
+      "path": "data/demo_company/source/outbound_july.csv",
+      "sha256": "3B7ED1851CBD857314AE51505D89E0DE39F55802B950B2551EEBB95B593AD6F0"
+    }
+  },
+  "claim_mappings": {
+    "inbound": {
+      "claim_sheet": "입고리스트",
+      "claim_start": 4,
+      "claim": {
+        "date": "A",
+        "key": [
+          "B",
+          "D"
+        ],
+        "quantity": "H",
+        "name": "G",
+        "sku": "D",
+        "charges": [
+          "L",
+          "M"
+        ]
+      },
+      "claim_headers": {
+        "A2": "입고일자",
+        "B2": "입고예정번호",
+        "D2": "품번",
+        "H2": "납품수량",
+        "G2": "삼품명"
+      }
+    },
+    "outbound": {
+      "claim_sheet": "B2B출고",
+      "claim_start": 4,
+      "claim": {
+        "date": "D",
+        "key": [
+          "A"
+        ],
+        "quantity": "G",
+        "note": "K",
+        "charges": [
+          "J",
+          "L",
+          "M",
+          "N",
+          "O"
+        ]
+      },
+      "claim_headers": {
+        "A2": "ERP",
+        "D2": "출고일",
+        "G2": "수량"
+      }
+    }
+  },
+  "decisions_path": "ia/config/demo_company_july_wms_decisions.json",
+  "consumable_marker": "(소모품)",
+  "approved_inbound_exclusions": {
+    "keys": [],
+    "types": []
+  },
+  "outbound_unbilled_types": {
+    "out_of_scope": [
+      "B2C주문",
+      "비연동(B2C)"
+    ],
+    "confirmed_b2b": [
+      "수출출하",
+      "내수출하"
+    ]
+  }
+}

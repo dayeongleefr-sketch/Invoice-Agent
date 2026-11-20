@@ -1,0 +1,16 @@
+**/__pycache__/
+**/*.pyc
+**/.runtime/
+**/.venv/
+.git/
+.codex/
+.env
+.env.*
+**/auth.json
+**/*.key
+**/backups/
+data/demo_company/derived/
+data/demo_company/runs/
+data/demo_company/memory/
+data/demo_company/monthly/
+*.zip

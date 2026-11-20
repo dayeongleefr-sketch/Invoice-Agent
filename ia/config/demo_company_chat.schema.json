@@ -1,0 +1,58 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "action",
+    "tool",
+    "question_ids",
+    "explanation",
+    "suggestions"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "tool_call",
+        "ask_user",
+        "final"
+      ]
+    },
+    "tool": {
+      "type": "string",
+      "enum": [
+        "list_supported_cases",
+        "inspect_verification_case",
+        "run_verification",
+        "read_verification_result",
+        "investigate_verification_result",
+        "none"
+      ]
+    },
+    "question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8
+    },
+    "explanation": {
+      "type": "string",
+      "maxLength": 1800
+    },
+    "suggestions": {
+      "type": "array",
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "enum": [
+          "start_verification",
+          "show_results",
+          "register_month",
+          "explain_issue",
+          "open_library",
+          "ask_question"
+        ]
+      }
+    }
+  }
+}

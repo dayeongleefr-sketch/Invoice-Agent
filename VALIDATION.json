@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-20",
+  "scope": "public website, fixed independent synthetic data, no AI",
+  "checks": {
+    "original_dashboard": true,
+    "uploads_absent": true,
+    "actual_python_recalculation": true,
+    "unresolved_count": 10,
+    "recalculation_cooldown": true,
+    "source_preview": true,
+    "report_and_checklist_detail": true,
+    "ai_transport_disabled": true,
+    "worker_mutations_blocked": true,
+    "host_origin_rejected": true,
+    "download_boundary": true,
+    "javascript_errors": [],
+    "mutation_methods_not_exposed": true,
+    "host": "win32",
+    "cloud_deployed": false,
+    "docker_build_tested": false
+  },
+  "linux_wheels": {
+    "available": 56,
+    "scope": "cross-platform pip dry run; Docker build not run locally"
+  },
+  "github_uploaded": false,
+  "render_deployed": false,
+  "public_url": null,
+  "limits": [
+    "GitHub and Render account integrations not confirmed.",
+    "No Docker runtime on current Windows host.",
+    "Real Linux container/HTTPS acceptance pending.",
+    "Free instance is for sample experience; restarts do not preserve personal records."
+  ]
+}

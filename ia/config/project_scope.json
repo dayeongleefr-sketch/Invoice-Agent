@@ -1,0 +1,13 @@
+{
+  "schema_version": "1",
+  "display_name": "DEMO COMPANY",
+  "allowed_company_ids": [
+    "demo_company"
+  ],
+  "source_root": "data/demo_company/source",
+  "aliases": [
+    "DEMO COMPANY",
+    "가상회사"
+  ],
+  "note": "독립 가상 자료. 고객 자료/승인 기록 없음."
+}

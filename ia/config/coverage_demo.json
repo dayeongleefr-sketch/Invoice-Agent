@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "cases": [
+    {
+      "case_id": "demo_brand_sf_xlsb_3",
+      "company_id": "demo_company",
+      "company_label": "DEMO COMPANY",
+      "warehouse_id": "demo_center",
+      "warehouse_label": "가상센터",
+      "source_path": "data/demo_company/source/claim.xlsx",
+      "source_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+      "source_format": "xlsx",
+      "document_role": "claim",
+      "sheet_names": [
+        "청구내역",
+        "입고리스트",
+        "B2B출고",
+        "B2C출고_택배",
+        "임가공-라벨",
+        "B2C출고",
+        "입고 외 기타",
+        "차감항목",
+        "반출",
+        "반품",
+        "언팩",
+        "컨테이너"
+      ],
+      "rules": [],
+      "row_rules": [],
+      "aggregates": [],
+      "python_rules": [],
+      "limitations": [],
+      "cost_items": [],
+      "service_month": "2029-07",
+      "service_period": {
+        "state": "confirmed_by_user",
+        "start": "2029-06-26",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "billing_month": "2029-07",
+      "currency": "KRW",
+      "source_aliases": []
+    },
+    {
+      "case_id": "demo_brand_sf_xlsb_1",
+      "company_id": "demo_company",
+      "company_label": "DEMO COMPANY",
+      "warehouse_id": "demo_center",
+      "warehouse_label": "가상센터",
+      "source_path": "data/demo_company/source/claim_summary.xlsx",
+      "source_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+      "source_format": "xlsx",
+      "document_role": "claim_summary",
+      "sheet_names": [
+        "청구내역",
+        "입고리스트",
+        "B2B출고",
+        "B2C출고_택배",
+        "임가공-라벨",
+        "B2C출고",
+        "입고 외 기타",
+        "차감항목",
+        "반출",
+        "반품",
+        "언팩",
+        "컨테이너"
+      ],
+      "rules": [],
+      "row_rules": [],
+      "aggregates": [],
+      "python_rules": [],
+      "limitations": [],
+      "cost_items": [],
+      "service_month": "2029-07",
+      "service_period": {
+        "state": "confirmed_by_user",
+        "start": "2029-06-26",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "billing_month": "2029-07",
+      "currency": "KRW",
+      "source_aliases": []
+    }
+  ],
+  "scope_note": "Independent synthetic documents"
+}

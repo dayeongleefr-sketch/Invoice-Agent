@@ -1,0 +1,26 @@
+{
+  "origin": "synthetic_example_policy_not_customer_approval",
+  "comparison_period": {
+    "state": "confirmed_by_user",
+    "start": "2029-06-26",
+    "end": "2029-07-25",
+    "origin": "synthetic_example_policy_not_customer_approval"
+  },
+  "yearless_date": {
+    "state": "confirmed_by_user",
+    "year": 2029,
+    "month": 7,
+    "origin": "synthetic_example_policy"
+  },
+  "outbound_types": {
+    "mode": "all_types_for_claim_order"
+  },
+  "skip_decisions": {},
+  "pending_decisions": [],
+  "reship_quantity": {},
+  "work_quantity_units": {},
+  "direct_wms_unbilled": {},
+  "b2c_prework": {},
+  "full_invoice_review": {},
+  "other_sheet_policy": {}
+}

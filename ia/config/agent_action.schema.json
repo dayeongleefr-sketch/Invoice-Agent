@@ -1,0 +1,61 @@
+{
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "action",
+                     "tool",
+                     "case_id",
+                     "run_id",
+                     "explanations"
+                 ],
+    "properties":  {
+                       "action":  {
+                                      "type":  "string",
+                                      "enum":  [
+                                                   "tool_call",
+                                                   "final"
+                                               ]
+                                  },
+                       "tool":  {
+                                    "type":  "string",
+                                    "enum":  [
+                                                 "list_supported_cases",
+                                                 "run_verification",
+                                                 "read_verification_result",
+                                                 "none",
+                                                 "inspect_verification_case",
+                                                 "investigate_verification_result"
+                                             ]
+                                },
+                       "case_id":  {
+                                       "type":  "string"
+                                   },
+                       "run_id":  {
+                                      "type":  "string"
+                                  },
+                       "explanations":  {
+                                            "type":  "array",
+                                            "maxItems":  4,
+                                            "items":  {
+                                                          "type":  "object",
+                                                          "additionalProperties":  false,
+                                                          "required":  [
+                                                                           "run_id",
+                                                                           "finding_id",
+                                                                           "explanation"
+                                                                       ],
+                                                          "properties":  {
+                                                                             "run_id":  {
+                                                                                            "type":  "string"
+                                                                                        },
+                                                                             "finding_id":  {
+                                                                                                "type":  "string"
+                                                                                            },
+                                                                             "explanation":  {
+                                                                                                 "type":  "string"
+                                                                                             }
+                                                                         }
+                                                      }
+                                        }
+                   }
+}

@@ -1,0 +1,137 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "intent",
+    "request_mode",
+    "month",
+    "target_aliases",
+    "target_selection",
+    "scope",
+    "application",
+    "summary",
+    "reason",
+    "criterion",
+    "effective_from_month",
+    "missing_fields",
+    "reply"
+  ],
+  "properties": {
+    "intent": {
+      "type": "string",
+      "enum": [
+        "conversation",
+        "query_results",
+        "inspect_evidence",
+        "investigate_issue",
+        "run_reconciliation",
+        "set_disposition",
+        "upsert_rule",
+        "revoke_rule",
+        "replay_version",
+        "activate_revision",
+        "register_materials",
+        "register_evidence",
+        "cancel_job",
+        "unsupported_request",
+        "clarify",
+        "cancel_draft"
+      ]
+    },
+    "request_mode": {
+      "type": "string",
+      "enum": [
+        "request",
+        "question",
+        "negated"
+      ]
+    },
+    "month": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7
+    },
+    "target_aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 16
+      },
+      "maxItems": 8
+    },
+    "target_selection": {
+      "type": "string",
+      "enum": [
+        "selected",
+        "mentioned",
+        "all_filtered",
+        "unspecified"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "once",
+        "future",
+        "unspecified"
+      ]
+    },
+    "application": {
+      "type": "string",
+      "enum": [
+        "current_case",
+        "future_only",
+        "current_and_future",
+        "unspecified"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "criterion": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 1000
+    },
+    "effective_from_month": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 7
+    },
+    "missing_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "target",
+          "scope",
+          "application",
+          "month",
+          "reason",
+          "criterion",
+          "effective_from_month",
+          "operation"
+        ]
+      },
+      "maxItems": 8
+    },
+    "reply": {
+      "type": "string",
+      "maxLength": 1800
+    }
+  }
+}
