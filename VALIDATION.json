@@ -109,14 +109,14 @@
     "available": 56,
     "scope": "cross-platform pip dry run; Docker build not run locally"
   },
-  "github_uploaded": false,
-  "render_deployed": false,
-  "public_url": null,
+  "github_uploaded": true,
+  "render_deployed": true,
+  "public_url": "https://invoice-agent-demo-bj7i.onrender.com",
   "limits": [
-    "This source revision awaits deployment to the existing Invoice agent Free service.",
-    "No Docker runtime on current Windows host.",
-    "Current revision Linux container/HTTPS acceptance pending.",
-    "Simulation actions are page-local; the calculation engine uses fixed synthetic inputs.",
-    "Free instance is for sample experience; restarts do not preserve personal records."
-  ]
+    "AI chat and registration/decision/rule changes are explicitly simulated, page-local, and reset on reload.",
+    "The Python engine actually calculates the included synthetic sources; no visitor files are uploaded.",
+    "Other-month chart points are fictional visual examples, not completed monthly runs.",
+    "Free service can sleep and has ephemeral storage; user walkthrough is not marked complete."
+  ],
+  "live_deployment": "DEPLOYMENT.json"
 }

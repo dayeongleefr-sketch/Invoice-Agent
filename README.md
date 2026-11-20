@@ -1,5 +1,17 @@
 # 물류비 검증 — 설치 없이 사용하는 공개 웹 버전
 
+**공개 실행 주소:** [물류비 검증 체험](https://invoice-agent-demo-bj7i.onrender.com)
+
+2026-11-20 전체 가상 원본과 화면 보완판을 기존 **Invoice agent / Free** 서비스에 반영했습니다.
+대시보드·확인 목록·보고서·비용 상세·원본 조회는 실제 계산 결과입니다.
+대화·보관함·월별 자료 등록·추가 증빙·단가/비교 기준·담당자 처리 화면은 시연을 제공합니다.
+채팅 답변에는 **시연 답변 · AI 미연결**을 표시하며 실제 모델을 호출하지 않습니다.
+78개 비용, 입고120행, B2B240주문, B2C2,400송장을 독립 가상 자료로 채웠습니다.
+공개 HTTPS에서 모든 메뉴·시연 입력·접속별 분리·실제 재계산·원본·보고서를 확인했습니다.
+배포 근거와 범위는 [DEPLOYMENT.json](DEPLOYMENT.json)에 있습니다.
+
+자동 배포는 꺼져 있습니다. 코드 변경 후 Render의 **Manual Deploy**로 반영합니다.
+
 GitHub는 코드를 보관하고, Render Web Service가 실제 Python 계산과 웹 화면을 실행합니다.
 배포 완료 후 발급된 HTTPS 주소를 공유하면 방문자는 Windows/Mac 구분 없이 브라우저로 사용합니다.
 이 폴더는 GitHub 저장소 루트에 올릴 소스입니다. ZIP 파일만 저장소에 올리면 Render가 실행할 수 없습니다.
@@ -40,4 +52,4 @@ Render는 RENDER_EXTERNAL_HOSTNAME을 자동 제공합니다. 한 프로세스·
 ## 검증 상태
 
 VALIDATION.json에서 로컬 공개 모드·실제 계산·AI 차단·브라우저·다운로드 범위·호스트/Origin 차단을 구분합니다.
-현재 PC의 시험을 Linux Docker 빌드나 실제 Render HTTPS 배포 성공으로 확대하지 않습니다.
+로컬 시험과 실제 Render Linux Docker/HTTPS 확인을 구분해 기록합니다.
