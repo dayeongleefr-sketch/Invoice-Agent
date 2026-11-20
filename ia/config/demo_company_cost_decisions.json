@@ -6,10 +6,18 @@
   "origin": "synthetic_example_policy_not_customer_approval",
   "b2c_charges": {
     "source_hashes": {
-      "claim": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
-      "outbound_july": "3B7ED1851CBD857314AE51505D89E0DE39F55802B950B2551EEBB95B593AD6F0",
+      "claim": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8",
+      "outbound_july": "A89C961BEAE339B6C51CDC0794DBCB8D7AD406A8012A5477C77F6041064BC880",
       "outbound_h1": "85693C9EF55CB8B93FC87DD0046452DF7C91E1BE0404A21C680B28A23EC6320E"
     },
-    "state": "unconfirmed"
+    "state": "unconfirmed",
+    "grouping": {
+      "state": "confirmed_by_user",
+      "origin": "synthetic_example_policy"
+    },
+    "prework": {
+      "state": "confirmed_by_user",
+      "origin": "synthetic_example_policy"
+    }
   }
 }

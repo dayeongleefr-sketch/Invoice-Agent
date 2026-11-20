@@ -1,17 +1,5847 @@
 {
   "schema_version": "1",
-  "enabled": false,
+  "enabled": true,
   "company_id": "demo_company",
   "warehouse_id": "demo_center",
   "invoice_month": "2029-07",
-  "claim_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+  "claim_sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8",
   "period": {
     "state": "confirmed_by_user",
-    "start": "2029-06-26",
+    "start": "2029-07-01",
     "end": "2029-07-25",
     "origin": "synthetic_example_policy_not_customer_approval"
   },
-  "decision": {},
-  "entries": [],
-  "stated_rate_decision": {}
+  "decision": {
+    "id": "U44",
+    "state": "provisionally_confirmed_by_user",
+    "origin": "synthetic_example_policy_not_customer_approval"
+  },
+  "entries": [
+    {
+      "axis": "work",
+      "invoice_row": 20,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 2,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 20,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 2,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 20,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 2,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 21,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 3,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 21,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 3,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 21,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 3,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 22,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 4,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 22,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 4,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 22,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 4,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 23,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 5,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 23,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 5,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 23,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 5,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 24,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 6,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 24,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 6,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 24,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 6,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 25,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 7,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 25,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 7,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 25,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 7,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 26,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 8,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 26,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 8,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 26,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 8,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 27,
+      "unit": "1톤",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 9,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 27,
+      "unit": "1톤",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 9,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 27,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 9,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 28,
+      "unit": "1~3EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 10,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 28,
+      "unit": "1~3EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 10,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 28,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 10,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 29,
+      "unit": "3종 SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 11,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 29,
+      "unit": "3종 SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 11,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 29,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 11,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 30,
+      "unit": "5종 OPP",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 12,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 30,
+      "unit": "5종 OPP",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 12,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 30,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 12,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 31,
+      "unit": "추가 EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 13,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 31,
+      "unit": "추가 EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 13,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 31,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 13,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 32,
+      "unit": "SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 14,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 32,
+      "unit": "SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 14,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 32,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 14,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 33,
+      "unit": "SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 15,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 33,
+      "unit": "SET",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 15,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 33,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 15,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 34,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 16,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 34,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 16,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 34,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 16,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 35,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 17,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 35,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 17,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 35,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 17,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 36,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 18,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 36,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 18,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 36,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 18,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 37,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 19,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 37,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 19,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 37,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 19,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 38,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 20,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 38,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 20,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 38,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 20,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 39,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 21,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 39,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 21,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 39,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 21,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 40,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 22,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 40,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 22,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 40,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 22,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 41,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 23,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 41,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 23,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 41,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 23,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 42,
+      "unit": "1,000 PCS 이하",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 24,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 42,
+      "unit": "1,000 PCS 이하",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 24,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 42,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 24,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 43,
+      "unit": "1,001~2,000 PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 25,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 43,
+      "unit": "1,001~2,000 PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 25,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 43,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 25,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 44,
+      "unit": "2,001~3,000 PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 26,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 44,
+      "unit": "2,001~3,000 PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 26,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 44,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 26,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 45,
+      "unit": "3,000 PCS 초과",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 27,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 45,
+      "unit": "3,000 PCS 초과",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 27,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 45,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 27,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 50,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 28,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 50,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 28,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 50,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 28,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 51,
+      "unit": "라벨",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 29,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 51,
+      "unit": "라벨",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 29,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 51,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 29,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 52,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 30,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 52,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 30,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 52,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 30,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 53,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 31,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 53,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 31,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 53,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 31,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 54,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 32,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 54,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 32,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 54,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 32,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 55,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 33,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 55,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 33,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 55,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 33,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 56,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 34,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 56,
+      "unit": "PCS",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 34,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 56,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 34,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 57,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 35,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 57,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 35,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 57,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 35,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 58,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 36,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 58,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 36,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 58,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 36,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 59,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 37,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 59,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 37,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 59,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 37,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 60,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 38,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 60,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 38,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 60,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 38,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 61,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 39,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 61,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 39,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 61,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 39,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 62,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 40,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 62,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 40,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 62,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 40,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 63,
+      "unit": "컨테이너",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 41,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 63,
+      "unit": "컨테이너",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 41,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 63,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 41,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 64,
+      "unit": "20FT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 42,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 64,
+      "unit": "20FT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 42,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 64,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 42,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 65,
+      "unit": "40FT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 43,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 65,
+      "unit": "40FT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 43,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 65,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 43,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 66,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 44,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 66,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 44,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 66,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 44,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 67,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 45,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 67,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 45,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 67,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 45,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 68,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 46,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 68,
+      "unit": "BOX",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 46,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 68,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 46,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 71,
+      "unit": "인일",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 49,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 71,
+      "unit": "인일",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 49,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 71,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 49,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 72,
+      "unit": "인일",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 50,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 72,
+      "unit": "인일",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 50,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 72,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 50,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 73,
+      "unit": "KG",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 51,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 73,
+      "unit": "KG",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 51,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 73,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 51,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 78,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 52,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 78,
+      "unit": "EA",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 52,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 78,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 52,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 79,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 53,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 79,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 53,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 79,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 53,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 81,
+      "unit": "장",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 55,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 81,
+      "unit": "장",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 55,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 81,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 55,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 82,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 56,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 82,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 56,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 82,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 56,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 83,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 57,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 83,
+      "unit": "PLT",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 57,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 83,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 57,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 88,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 58,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 88,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 58,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 88,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 58,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 89,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 59,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 89,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 59,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 89,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 59,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 90,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 60,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 90,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 60,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 90,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 60,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 91,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 61,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 91,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 61,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 91,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 61,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 92,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 62,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 92,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 62,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 92,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 62,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 93,
+      "unit": "㎡/월",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 63,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 93,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 63,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 98,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 64,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 98,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 64,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 98,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 64,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 99,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 65,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 99,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 65,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 99,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 65,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 100,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 66,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 100,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 66,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 100,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 66,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 101,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 67,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 101,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 67,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 101,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 67,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 102,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 68,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 102,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 68,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 102,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 68,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 103,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 69,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 103,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 69,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 103,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 69,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 104,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 70,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 104,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 70,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 104,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 70,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 105,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 71,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 105,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 71,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 105,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 71,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 106,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 72,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 106,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 72,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 106,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 72,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 107,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 73,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 107,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 73,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 107,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 73,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 108,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 74,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 108,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 74,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 108,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 74,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 109,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 75,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 109,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 75,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 109,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 75,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 110,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 76,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 110,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 76,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 110,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 76,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 111,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 77,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 111,
+      "unit": "원",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 77,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 111,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 77,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 116,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 78,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 116,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 78,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 116,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 78,
+            "column": "공급가액"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "work",
+      "invoice_row": 117,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 79,
+            "column": "작업량"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "contract",
+      "invoice_row": 117,
+      "unit": "건",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 79,
+            "column": "적용단가"
+          }
+        }
+      ]
+    },
+    {
+      "axis": "actual_cost",
+      "invoice_row": 117,
+      "unit": "KRW",
+      "scope_confirmed": true,
+      "coverage_complete": true,
+      "currency": "KRW",
+      "amount_basis": "supply_amount",
+      "period": {
+        "state": "confirmed_by_user",
+        "start": "2029-07-01",
+        "end": "2029-07-25",
+        "origin": "synthetic_example_policy_not_customer_approval"
+      },
+      "sources": [
+        {
+          "path": "data/demo_company/source/operational_evidence.csv",
+          "sha256": "4B896FE39C5B433973E7F0BE340AF17D940BA502C8A1436BA3312E9E0AB8B9EA",
+          "selector": {
+            "format": "csv",
+            "row": 79,
+            "column": "공급가액"
+          }
+        }
+      ]
+    }
+  ],
+  "stated_rate_decision": {},
+  "synthetic_only": true
 }

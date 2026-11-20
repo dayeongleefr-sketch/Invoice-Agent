@@ -323,15 +323,17 @@ body {font-size:16px}
 
 
 def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_variant=None):
+    from public_demo_ui import DemoScreens
+    demo_ui=DemoScreens(adapter)
     ui.colors(primary='#75604A', secondary='#6B7684', positive='#1A9D72', negative='#E5484D', warning='#D99013')
     ui.add_css(STYLE)
     if dashboard_variant == 'priority':
         from priority_dashboard import STYLE as PRIORITY_STYLE
         ui.add_css(PRIORITY_STYLE)
-    ui.page_title('DEMO COMPANY · 물류비 검증')
+    ui.page_title('아르보코스 · 물류비 검증')
     policy = load(ROOT / POLICY)
     period = policy.get('period', {})
-    scope = f"가상센터 · 가상물류사 · {policy.get('invoice_month', '기간 미등록')} 청구"
+    scope = f"솔빛센터 · 가상물류사 · {policy.get('invoice_month', '기간 미등록')} 청구"
     period_text = f"비교기간 {period.get('start', '미등록')} ~ {period.get('end', '미등록')}"
     last = {'signature': None, 'files': None, 'questions': None, 'intake': None, 'memory': None, 'disposition': None, 'rule': None}
     view = {'rows': [], 'group': '전체', 'status': '전체', 'query': '', 'selected': None, 'focus_ids':None, 'cost_context':None}
@@ -366,14 +368,14 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
         with ui.row().classes('items-center gap-3 mb-1'):
             with ui.element('div').style('background:#75604A;border-radius:10px;padding:8px;display:flex'):
                 ui.icon('fact_check', size='22px', color='white')
-            ui.label('DEMO COMPANY').classes('brand')
+            ui.label('아르보코스').classes('brand')
         ui.label('LOGISTICS WORKSPACE').classes('eyebrow mt-3 mb-9')
-        for name, icon, target in [('대시보드', 'space_dashboard', '대시보드'), 
+        for name, icon, target in [('대시보드', 'space_dashboard', '대시보드'), ('에이전트 대화', 'chat_bubble_outline', '대화'),
                                     ('확인 목록', 'rule', '확인 목록'),
-                                    ]:
+                                    ('추가 증빙', 'upload_file', '추가 증빙'), ('월별 검증', 'calendar_month', '월별 검증'), ('채팅 보관함', 'folder_open', '채팅 보관함')]:
             nav_buttons[target] = ui.button(name, icon=icon, on_click=lambda t=target: tabs.set_value(t)).props('flat no-caps align=left color=grey-7').classes('nav-button w-full mb-1')
         ui.separator().classes('my-6')
-        ui.label('가상 자료 체험 · AI 미사용').classes('muted')
+        ui.button('새 채팅', icon='add', on_click=demo_ui.new_chat).props('unelevated no-caps').classes('w-full')
         ui.space()
         with ui.column().classes('gap-2 mt-8'):
             ui.label('기존 완료 결과').classes('muted')
@@ -389,7 +391,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
     with ui.column().classes('workspace'):
         with ui.card().classes('w-full gap-2'):
             ui.label('가상 청구·WMS 검증 체험').classes('text-lg font-semibold')
-            ui.label('포함된 가상 자료를 실제 계산합니다. AI 대화와 개인 파일 등록은 사용하지 않습니다.').classes('muted')
+            ui.label('가상 자료 78개 비용 · 입고 120행 · B2B 240건 · B2C 2,400건을 실제 계산합니다. 채팅·등록·처리 화면은 AI 없는 시연입니다.').classes('muted')
             def calculate_sample():
                 try:adapter.start('public_calculate')
                 except ValueError as exc:ui.notify(str(exc),type='warning')
@@ -402,13 +404,14 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
         verification_banner=ui.column().classes('w-full gap-1').props('data-testid=verification-banner')
         with ui.tabs().classes('w-full justify-start').props('align=left') as tabs:
             dashboard_tab = ui.tab('대시보드')
-            chat_tab = ui.tab('대화').style('display:none')
+            chat_tab = ui.tab('대화')
             results_tab = ui.tab('확인 목록')
-            evidence_tab = ui.tab('추가 증빙').style('display:none')
-            monthly_tab = ui.tab('월별 검증').style('display:none')
-            library_tab = ui.tab('채팅 보관함').style('display:none')
+            evidence_tab = ui.tab('추가 증빙')
+            monthly_tab = ui.tab('월별 검증')
+            library_tab = ui.tab('채팅 보관함')
         if dashboard_variant == 'priority':
             tabs.style('display:none')
+        demo_ui.navigate=tabs.set_value
         with ui.tab_panels(tabs, value=dashboard_tab, animated=False):
             with ui.tab_panel(dashboard_tab).classes('dashboard-page ' + ('dashboard-classic' if dashboard_variant == 'classic' else 'dashboard-current' if dashboard_variant is None else '')):
                 dashboard = ui.column().classes('w-full gap-6')
@@ -418,6 +421,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
                         with ui.column().classes('gap-1'):
                             ui.label('확인이 필요한 내역').classes('title')
                         with ui.row().classes('checklist-actions items-center').props('data-testid=checklist-actions'):
+                            demo_ui.management_buttons()
                             ui.button('CSV 다운로드', icon='download', on_click=lambda: ui.download(download_url(BASE / '검토필요_전체목록.csv'))).props('outline no-caps').tooltip('계산 결과의 확인 목록 다운로드')
                             if disposition_supported:
                                 ui.button('처리 상태 포함 CSV', icon='download', on_click=lambda: ui.download('/review-status.csv')).props('outline no-caps data-testid=review-csv-download').tooltip('담당자의 완료·취소 상태를 포함한 목록 다운로드')
@@ -514,42 +518,43 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
                         detail.set_visibility(False)
                     investigation = ui.column().classes('w-full')
             with ui.tab_panel(chat_tab):
-                with ui.column().classes('chat-content') as chat_content:
-                    with ui.row().classes('w-full items-center justify-between mb-4'):
-                        chat_title=ui.label('검증 에이전트와 대화').classes('title')
-                        with ui.row().classes('gap-1'):
-                            ui.button('채팅 보관함',icon='folder_open',on_click=lambda:tabs.set_value(library_tab)).props('flat no-caps')
-                            ui.button('결과 조회', on_click=lambda: launch('read')).props('flat no-caps')
-                            ui.button('원인 조회', on_click=lambda: launch('investigate')).props('flat no-caps')
-                    with ui.row().classes('w-full gap-2'):
-                        selection_mode_button=ui.button('메시지 선택',icon='checklist',on_click=lambda:set_message_selection_mode(not message_selection_mode['active'])).props('flat dense')
-                        select_all_messages=ui.button('전체 선택',icon='select_all',on_click=lambda:toggle_all_messages()).props('flat dense').tooltip('현재 대화의 모든 메시지 선택·해제')
-                        delete_selected=ui.button('선택 삭제 (0)',icon='delete_outline',on_click=lambda:delete_messages(list(selected_messages))).props('flat dense color=negative')
-                        select_all_messages.set_visibility(False)
-                        delete_selected.set_visibility(False)
-                    messages = ui.column().classes('w-full chat-messages').props('data-testid=chat-messages role=log aria-label=대화기록 aria-live=polite')
-                    chat_status = ui.column().classes('w-full gap-2')
-                    command_intake = ui.column().classes('w-full gap-2').props('data-testid=command-intake')
-                    memory_preview = ui.column().classes('w-full gap-2').props('data-testid=memory-preview')
-                    disposition_preview = ui.column().classes('w-full gap-2').props('data-testid=disposition-preview')
-                    rule_preview = ui.column().classes('w-full gap-2').props('data-testid=rule-preview')
-                    with ui.expansion('예외·비교 기준 관리',icon='bookmark_border').classes('w-full').props('data-testid=saved-memory-expansion') as memory_expansion:
-                        ui.label('담당자가 저장한 예외 처리와 비교 기준입니다. 저장만 한 내용과 확인 후 적용한 내용을 구분합니다.').classes('muted')
-                        if hasattr(adapter,'rate_catalog'):
-                            ui.button('청구 항목 선택 · 단가 비교',icon='price_change',on_click=lambda:rate_dialog()).props('outline no-caps data-testid=rate-catalog-chat')
-                        ui.label('채팅에서 정리한 예외·비교 기준을 보관합니다. 요청 저장 → 내용 확인 → 처리 또는 비교 결과 반영 순서로 진행합니다.').classes('muted mb-3')
-                        ui.button('저장 목록 새로고침',on_click=lambda:load_saved_memory()).props('flat no-caps data-testid=refresh-saved-memory')
-                        memory_records = ui.column().classes('w-full gap-3').props('data-testid=saved-memory-records')
-                    memory_expansion.set_visibility(memory_supported)
-                    memory_expansion.on_value_change(lambda e:load_saved_memory() if e.value else None)
-                    questions = ui.column().classes('w-full')
+                demo_ui.chat()
+                with ui.column().style('display:none'):
+                    with ui.column().classes('chat-content') as chat_content:
+                        with ui.row().classes('w-full items-center justify-between mb-4'):
+                            chat_title=ui.label('검증 에이전트와 대화').classes('title')
+                            with ui.row().classes('gap-1'):
+                                ui.button('채팅 보관함',icon='folder_open',on_click=lambda:tabs.set_value(library_tab)).props('flat no-caps')
+                                ui.button('결과 조회', on_click=lambda: launch('read')).props('flat no-caps')
+                                ui.button('원인 조회', on_click=lambda: launch('investigate')).props('flat no-caps')
+                        with ui.row().classes('w-full gap-2'):
+                            selection_mode_button=ui.button('메시지 선택',icon='checklist',on_click=lambda:set_message_selection_mode(not message_selection_mode['active'])).props('flat dense')
+                            select_all_messages=ui.button('전체 선택',icon='select_all',on_click=lambda:toggle_all_messages()).props('flat dense').tooltip('현재 대화의 모든 메시지 선택·해제')
+                            delete_selected=ui.button('선택 삭제 (0)',icon='delete_outline',on_click=lambda:delete_messages(list(selected_messages))).props('flat dense color=negative')
+                            select_all_messages.set_visibility(False)
+                            delete_selected.set_visibility(False)
+                        messages = ui.column().classes('w-full chat-messages').props('data-testid=chat-messages role=log aria-label=대화기록 aria-live=polite')
+                        chat_status = ui.column().classes('w-full gap-2')
+                        command_intake = ui.column().classes('w-full gap-2').props('data-testid=command-intake')
+                        memory_preview = ui.column().classes('w-full gap-2').props('data-testid=memory-preview')
+                        disposition_preview = ui.column().classes('w-full gap-2').props('data-testid=disposition-preview')
+                        rule_preview = ui.column().classes('w-full gap-2').props('data-testid=rule-preview')
+                        with ui.expansion('예외·비교 기준 관리',icon='bookmark_border').classes('w-full').props('data-testid=saved-memory-expansion') as memory_expansion:
+                            ui.label('담당자가 저장한 예외 처리와 비교 기준입니다. 저장만 한 내용과 확인 후 적용한 내용을 구분합니다.').classes('muted')
+                            if hasattr(adapter,'rate_catalog'):
+                                ui.button('청구 항목 선택 · 단가 비교',icon='price_change',on_click=lambda:rate_dialog()).props('outline no-caps data-testid=rate-catalog-chat')
+                            ui.label('채팅에서 정리한 예외·비교 기준을 보관합니다. 요청 저장 → 내용 확인 → 처리 또는 비교 결과 반영 순서로 진행합니다.').classes('muted mb-3')
+                            ui.button('저장 목록 새로고침',on_click=lambda:load_saved_memory()).props('flat no-caps data-testid=refresh-saved-memory')
+                            memory_records = ui.column().classes('w-full gap-3').props('data-testid=saved-memory-records')
+                        memory_expansion.set_visibility(memory_supported)
+                        memory_expansion.on_value_change(lambda e:load_saved_memory() if e.value else None)
+                        questions = ui.column().classes('w-full')
             with ui.tab_panel(evidence_tab):
-                ui.label('공개 체험은 포함된 가상 자료만 사용합니다.')
+                demo_ui.evidence_screen()
             with ui.tab_panel(monthly_tab):
-                ui.label('공개 체험은 포함된 가상 자료만 사용합니다.')
-                focus_month=lambda *args:None
+                focus_month=demo_ui.monthly()
             with ui.tab_panel(library_tab):
-                ui.label('AI 대화는 사용하지 않습니다.')
+                demo_ui.library()
     with ui.dialog().props('data-testid=dashboard-report-dialog') as report_dialog:
         with ui.card().classes('report-dialog'):
             with ui.row().classes('w-full items-center justify-between'):
@@ -565,7 +570,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
             clear_target_button = ui.button(icon='close', on_click=lambda: clear_chat_target()).props('flat round dense aria-label="대화 대상 해제"').tooltip('대화 대상 해제')
         target_chip.set_visibility(False)
         with ui.row().classes('composer w-full items-end flex-nowrap'):
-            prompt = ui.textarea(placeholder='예: DEMO COMPANY 가상센터 2029년 7월 전체 청구 검증해줘').props('borderless autogrow rows=1').classes('grow')
+            prompt = ui.textarea(placeholder='예: 아르보코스 솔빛센터 2029년 7월 전체 청구 검증해줘').props('borderless autogrow rows=1').classes('grow')
             send = ui.button(icon='arrow_upward', on_click=lambda: submit()).props('round unelevated aria-label=메시지보내기').tooltip('메시지 보내기')
         ui.label('Enter로 전송 · Shift+Enter로 줄바꿈').classes('composer-note w-full')
         progress = ui.label('').classes('composer-note w-full')
@@ -574,7 +579,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
     def highlight_navigation(value):
         if value == '대화' or value == chat_tab:
             ui.run_javascript('setTimeout(() => {' + SCROLL_SCRIPT + '; window.skinChat?.open();}, 80)')
-        if value == '채팅 보관함' or value == library_tab:value='대화'
+        if value == library_tab:value='채팅 보관함'
         for target, button in nav_buttons.items():
             button.props('color=primary' if target == value else 'color=grey-7')
             button.style('background:#EAE1D5' if target == value else 'background:transparent')
@@ -629,10 +634,12 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
         update_message_selection()
 
     def choose_chat():
+        demo_ui.seed_prompt('이번 달 청구 요약을 알려줘');return
         tabs.set_value(chat_tab)
         prompt.set_value(DEFAULT_REQUEST)
 
     def write_prompt(text):
+        demo_ui.seed_prompt(text);return
         tabs.set_value(chat_tab)
         prompt.set_value(text)
         prompt.run_method('focus')
@@ -641,7 +648,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
     def start_verification():
         with ui.dialog() as dialog, ui.card().classes('w-96 max-w-full gap-4'):
             ui.label('검증할 월을 선택해 주세요').classes('section-title')
-            ui.label('DEMO COMPANY · 가상센터').classes('muted')
+            ui.label('아르보코스 · 가상센터').classes('muted')
             month=calendar_input('검증 월 (YYYY-MM)',month_only=True,placeholder='예: 2029-08').classes('w-full')
             ui.label('요청을 보내면 해당 월의 자료 등록 여부부터 확인합니다.').classes('muted')
             def prepare():
@@ -649,7 +656,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
                 if not re.fullmatch(r'20\d{2}-(0[1-9]|1[0-2])',value):
                     ui.notify('검증 월을 2029-08 형식으로 입력해 주세요.',type='warning');return
                 dialog.close()
-                write_prompt(f'DEMO COMPANY 가상센터 {value} 전체 청구 검증해줘')
+                write_prompt(f'아르보코스 솔빛센터 {value} 전체 청구 검증해줘')
             with ui.row().classes('w-full justify-end'):
                 ui.button('취소',on_click=dialog.close).props('flat')
                 ui.button('요청 작성',on_click=prepare)
@@ -676,7 +683,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
             ui.notify(str(exc), type='negative')
 
     def chat_about_issue(row):
-        ui.notify('AI 대화는 사용하지 않습니다. 상세의 비교 근거를 확인하세요.');return
+        demo_ui.seed_prompt('선택한 내역의 차이 원인을 설명해줘: '+str(row.get('검증항목',row.get('항목','선택 청구'))));return
         try:
             adapter.select_chat_targets([row['_id']], expected_result_version=row.get('_result_version'))
             tabs.set_value(chat_tab)
@@ -1890,7 +1897,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
             with ui.row().classes('w-full items-start justify-between gap-3'):
                 with ui.column().classes('gap-2'):
                     ui.label('청구 검증 현황').classes('title')
-                    ui.label('DEMO COMPANY · ' + scope).classes('scope-line text-sm font-medium')
+                    ui.label('아르보코스 · ' + scope).classes('scope-line text-sm font-medium')
                     ui.label(period_text).classes('muted')
                 with ui.row().classes('items-center gap-2'):
                     ui.button('검증 요청', icon='add', on_click=choose_chat).props('unelevated no-caps')
@@ -1963,10 +1970,10 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
                     ui.table(columns=[{'name':k,'field':k,'label':v,'align':'right' if k in ('raw_rows','targets') else 'left'} for k,v in [('label','구분'),('sheet','청구 시트'),('raw_rows','값이 있는 원본 행'),('targets','비교 대상 수'),('unit','대상 1개의 의미')]],rows=coverage_rows,row_key='group').props('flat data-testid=coverage-table').classes('w-full')
                 with ui.card().classes('w-full gap-3' + ('' if dashboard_variant == 'classic' else ' coverage-collapsible')).props('data-testid=verification-coverage'):
                     if dashboard_variant == 'classic':
-                        ui.label('전체 검증 범위 · DEMO COMPANY 가상센터 2029년 7월').classes('section-title')
+                        ui.label('전체 검증 범위 · 아르보코스 솔빛센터 2029년 7월').classes('section-title')
                         coverage_content()
                     else:
-                        with ui.expansion('전체 검증 범위 · DEMO COMPANY 가상센터 2029년 7월', value=False).classes('w-full coverage-expansion').props('data-testid=coverage-toggle'):
+                        with ui.expansion('전체 검증 범위 · 아르보코스 솔빛센터 2029년 7월', value=False).classes('w-full coverage-expansion').props('data-testid=coverage-toggle'):
                             with ui.column().classes('w-full coverage-content'):
                                 coverage_content()
             with ui.row().classes('w-full items-center justify-between'):
@@ -2074,7 +2081,7 @@ def render_page(adapter, download_url, web_report, evidence_form, *, dashboard_v
                 elif is_chat and job['status']=='completed':
                     month=job.get('result',{}).get('proposed_verification_month')
                     if month:
-                        ui.button(month+' 자료로 검증 실행',on_click=lambda m=month:launch('agent',request=f'DEMO COMPANY 가상센터 {m} 전체 청구 검증해줘')).props('unelevated no-caps')
+                        ui.button(month+' 자료로 검증 실행',on_click=lambda m=month:launch('agent',request=f'아르보코스 솔빛센터 {m} 전체 청구 검증해줘')).props('unelevated no-caps')
                 elif job['status'] == 'completed':
                     with ui.row().classes('gap-2'):
                         if job.get('month'):

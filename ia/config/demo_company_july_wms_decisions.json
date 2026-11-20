@@ -2,7 +2,7 @@
   "origin": "synthetic_example_policy_not_customer_approval",
   "comparison_period": {
     "state": "confirmed_by_user",
-    "start": "2029-06-26",
+    "start": "2029-07-01",
     "end": "2029-07-25",
     "origin": "synthetic_example_policy_not_customer_approval"
   },
@@ -22,5 +22,11 @@
   "direct_wms_unbilled": {},
   "b2c_prework": {},
   "full_invoice_review": {},
-  "other_sheet_policy": {}
+  "other_sheet_policy": {},
+  "olive_extra_work": {
+    "id": "U41",
+    "mode": "one_work_per_box",
+    "claim_sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8",
+    "origin": "synthetic_example_policy"
+  }
 }

@@ -4,11 +4,11 @@
     {
       "case_id": "demo_brand_sf_xlsb_3",
       "company_id": "demo_company",
-      "company_label": "DEMO COMPANY",
+      "company_label": "아르보코스(가상)",
       "warehouse_id": "demo_center",
-      "warehouse_label": "가상센터",
+      "warehouse_label": "솔빛센터(가상)",
       "source_path": "data/demo_company/source/claim.xlsx",
-      "source_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+      "source_sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8",
       "source_format": "xlsx",
       "document_role": "claim",
       "sheet_names": [
@@ -16,25 +16,885 @@
         "입고리스트",
         "B2B출고",
         "B2C출고_택배",
+        "입고 외 기타",
+        "B2B 기타",
+        "B2B 반품",
+        "B2C반품",
+        "B2C출고_용차",
         "임가공-라벨",
         "B2C출고",
-        "입고 외 기타",
-        "차감항목",
-        "반출",
-        "반품",
-        "언팩",
-        "컨테이너"
+        "반품리스트",
+        "차감항목"
       ],
       "rules": [],
       "row_rules": [],
       "aggregates": [],
-      "python_rules": [],
+      "python_rules": [
+        {
+          "id": "line.charge.20",
+          "label": "상품 입고",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N20",
+          "operands": [
+            "L20",
+            "M20"
+          ]
+        },
+        {
+          "id": "line.charge.21",
+          "label": "상품 입고",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N21",
+          "operands": [
+            "L21",
+            "M21"
+          ]
+        },
+        {
+          "id": "line.charge.22",
+          "label": "반출",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N22",
+          "operands": [
+            "L22",
+            "M22"
+          ]
+        },
+        {
+          "id": "line.charge.23",
+          "label": "라벨 교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N23",
+          "operands": [
+            "L23",
+            "M23"
+          ]
+        },
+        {
+          "id": "line.charge.24",
+          "label": "PLT 재적치",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N24",
+          "operands": [
+            "L24",
+            "M24"
+          ]
+        },
+        {
+          "id": "line.charge.25",
+          "label": "랩핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N25",
+          "operands": [
+            "L25",
+            "M25"
+          ]
+        },
+        {
+          "id": "line.charge.26",
+          "label": "상차비",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N26",
+          "operands": [
+            "L26",
+            "M26"
+          ]
+        },
+        {
+          "id": "line.charge.27",
+          "label": "수작업 하차",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N27",
+          "operands": [
+            "L27",
+            "M27"
+          ]
+        },
+        {
+          "id": "line.charge.28",
+          "label": "기본포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N28",
+          "operands": [
+            "L28",
+            "M28"
+          ]
+        },
+        {
+          "id": "line.charge.29",
+          "label": "샤쉐 포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N29",
+          "operands": [
+            "L29",
+            "M29"
+          ]
+        },
+        {
+          "id": "line.charge.30",
+          "label": "샤쉐 포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N30",
+          "operands": [
+            "L30",
+            "M30"
+          ]
+        },
+        {
+          "id": "line.charge.31",
+          "label": "추가포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N31",
+          "operands": [
+            "L31",
+            "M31"
+          ]
+        },
+        {
+          "id": "line.charge.32",
+          "label": "행사 선작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N32",
+          "operands": [
+            "L32",
+            "M32"
+          ]
+        },
+        {
+          "id": "line.charge.33",
+          "label": "선작업 해체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N33",
+          "operands": [
+            "L33",
+            "M33"
+          ]
+        },
+        {
+          "id": "line.charge.34",
+          "label": "BOX 피킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N34",
+          "operands": [
+            "L34",
+            "M34"
+          ]
+        },
+        {
+          "id": "line.charge.35",
+          "label": "PCS 피킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N35",
+          "operands": [
+            "L35",
+            "M35"
+          ]
+        },
+        {
+          "id": "line.charge.36",
+          "label": "수출 BOX 패킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N36",
+          "operands": [
+            "L36",
+            "M36"
+          ]
+        },
+        {
+          "id": "line.charge.37",
+          "label": "수출 PCS 패킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N37",
+          "operands": [
+            "L37",
+            "M37"
+          ]
+        },
+        {
+          "id": "line.charge.38",
+          "label": "분할출고 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N38",
+          "operands": [
+            "L38",
+            "M38"
+          ]
+        },
+        {
+          "id": "line.charge.39",
+          "label": "B2C 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N39",
+          "operands": [
+            "L39",
+            "M39"
+          ]
+        },
+        {
+          "id": "line.charge.40",
+          "label": "B2B 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N40",
+          "operands": [
+            "L40",
+            "M40"
+          ]
+        },
+        {
+          "id": "line.charge.41",
+          "label": "B2B 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N41",
+          "operands": [
+            "L41",
+            "M41"
+          ]
+        },
+        {
+          "id": "line.charge.42",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N42",
+          "operands": [
+            "L42",
+            "M42"
+          ]
+        },
+        {
+          "id": "line.charge.43",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N43",
+          "operands": [
+            "L43",
+            "M43"
+          ]
+        },
+        {
+          "id": "line.charge.44",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N44",
+          "operands": [
+            "L44",
+            "M44"
+          ]
+        },
+        {
+          "id": "line.charge.45",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N45",
+          "operands": [
+            "L45",
+            "M45"
+          ]
+        },
+        {
+          "id": "line.charge.50",
+          "label": "인스펙션(B2B)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N50",
+          "operands": [
+            "L50",
+            "M50"
+          ]
+        },
+        {
+          "id": "line.charge.51",
+          "label": "라벨 부착(B2B)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N51",
+          "operands": [
+            "L51",
+            "M51"
+          ]
+        },
+        {
+          "id": "line.charge.52",
+          "label": "가상채널A 추가 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N52",
+          "operands": [
+            "L52",
+            "M52"
+          ]
+        },
+        {
+          "id": "line.charge.53",
+          "label": "가상채널B 추가 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N53",
+          "operands": [
+            "L53",
+            "M53"
+          ]
+        },
+        {
+          "id": "line.charge.54",
+          "label": "송장 추가부착(B2C)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N54",
+          "operands": [
+            "L54",
+            "M54"
+          ]
+        },
+        {
+          "id": "line.charge.55",
+          "label": "상품교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N55",
+          "operands": [
+            "L55",
+            "M55"
+          ]
+        },
+        {
+          "id": "line.charge.56",
+          "label": "상품해체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N56",
+          "operands": [
+            "L56",
+            "M56"
+          ]
+        },
+        {
+          "id": "line.charge.57",
+          "label": "상품 라벨덧방",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N57",
+          "operands": [
+            "L57",
+            "M57"
+          ]
+        },
+        {
+          "id": "line.charge.58",
+          "label": "정합",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N58",
+          "operands": [
+            "L58",
+            "M58"
+          ]
+        },
+        {
+          "id": "line.charge.59",
+          "label": "아웃박스 교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N59",
+          "operands": [
+            "L59",
+            "M59"
+          ]
+        },
+        {
+          "id": "line.charge.60",
+          "label": "공용 PLT 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N60",
+          "operands": [
+            "L60",
+            "M60"
+          ]
+        },
+        {
+          "id": "line.charge.61",
+          "label": "일반 밴딩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N61",
+          "operands": [
+            "L61",
+            "M61"
+          ]
+        },
+        {
+          "id": "line.charge.62",
+          "label": "십자 밴딩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N62",
+          "operands": [
+            "L62",
+            "M62"
+          ]
+        },
+        {
+          "id": "line.charge.63",
+          "label": "컨테이너 쇼링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N63",
+          "operands": [
+            "L63",
+            "M63"
+          ]
+        },
+        {
+          "id": "line.charge.64",
+          "label": "컨테이너 추가작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N64",
+          "operands": [
+            "L64",
+            "M64"
+          ]
+        },
+        {
+          "id": "line.charge.65",
+          "label": "컨테이너 추가작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N65",
+          "operands": [
+            "L65",
+            "M65"
+          ]
+        },
+        {
+          "id": "line.charge.66",
+          "label": "PLT 압축",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N66",
+          "operands": [
+            "L66",
+            "M66"
+          ]
+        },
+        {
+          "id": "line.charge.67",
+          "label": "쉬핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N67",
+          "operands": [
+            "L67",
+            "M67"
+          ]
+        },
+        {
+          "id": "line.charge.68",
+          "label": "쉬핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N68",
+          "operands": [
+            "L68",
+            "M68"
+          ]
+        },
+        {
+          "id": "line.charge.69",
+          "label": "A구역 시설 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N69",
+          "operands": [
+            "L69",
+            "M69"
+          ]
+        },
+        {
+          "id": "line.charge.70",
+          "label": "B구역 시설 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N70",
+          "operands": [
+            "L70",
+            "M70"
+          ]
+        },
+        {
+          "id": "line.charge.71",
+          "label": "야간 인력 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N71",
+          "operands": [
+            "L71",
+            "M71"
+          ]
+        },
+        {
+          "id": "line.charge.72",
+          "label": "행사 인력 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N72",
+          "operands": [
+            "L72",
+            "M72"
+          ]
+        },
+        {
+          "id": "line.charge.73",
+          "label": "폐기물 처리",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N73",
+          "operands": [
+            "L73",
+            "M73"
+          ]
+        },
+        {
+          "id": "line.charge.78",
+          "label": "포장 상자·완충재",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N78",
+          "operands": [
+            "L78",
+            "M78"
+          ]
+        },
+        {
+          "id": "line.charge.79",
+          "label": "부자재 핸들링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N79",
+          "operands": [
+            "L79",
+            "M79"
+          ]
+        },
+        {
+          "id": "line.charge.80",
+          "label": "포장기 임대",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N80",
+          "operands": [
+            "L80",
+            "M80"
+          ]
+        },
+        {
+          "id": "line.charge.81",
+          "label": "무지 라벨",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N81",
+          "operands": [
+            "L81",
+            "M81"
+          ]
+        },
+        {
+          "id": "line.charge.82",
+          "label": "수출용 PLT",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N82",
+          "operands": [
+            "L82",
+            "M82"
+          ]
+        },
+        {
+          "id": "line.charge.83",
+          "label": "공용 PLT 사용료",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N83",
+          "operands": [
+            "L83",
+            "M83"
+          ]
+        },
+        {
+          "id": "line.charge.88",
+          "label": "상품 보관 · A구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N88",
+          "operands": [
+            "L88",
+            "M88"
+          ]
+        },
+        {
+          "id": "line.charge.89",
+          "label": "상품 보관 · B구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N89",
+          "operands": [
+            "L89",
+            "M89"
+          ]
+        },
+        {
+          "id": "line.charge.90",
+          "label": "상품 보관 · C구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N90",
+          "operands": [
+            "L90",
+            "M90"
+          ]
+        },
+        {
+          "id": "line.charge.91",
+          "label": "상품 보관 · D구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N91",
+          "operands": [
+            "L91",
+            "M91"
+          ]
+        },
+        {
+          "id": "line.charge.92",
+          "label": "상품 보관 · E구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N92",
+          "operands": [
+            "L92",
+            "M92"
+          ]
+        },
+        {
+          "id": "line.charge.93",
+          "label": "상품 보관 · F구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N93",
+          "operands": [
+            "L93",
+            "M93"
+          ]
+        },
+        {
+          "id": "line.charge.98",
+          "label": "소형 2KG/80CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N98",
+          "operands": [
+            "L98",
+            "M98"
+          ]
+        },
+        {
+          "id": "line.charge.99",
+          "label": "중소형 5KG/100CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N99",
+          "operands": [
+            "L99",
+            "M99"
+          ]
+        },
+        {
+          "id": "line.charge.100",
+          "label": "중형 15KG/120CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N100",
+          "operands": [
+            "L100",
+            "M100"
+          ]
+        },
+        {
+          "id": "line.charge.101",
+          "label": "중대형 15KG/140CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N101",
+          "operands": [
+            "L101",
+            "M101"
+          ]
+        },
+        {
+          "id": "line.charge.102",
+          "label": "대형 20KG/160CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N102",
+          "operands": [
+            "L102",
+            "M102"
+          ]
+        },
+        {
+          "id": "line.charge.103",
+          "label": "특대형",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N103",
+          "operands": [
+            "L103",
+            "M103"
+          ]
+        },
+        {
+          "id": "line.charge.104",
+          "label": "규격외",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N104",
+          "operands": [
+            "L104",
+            "M104"
+          ]
+        },
+        {
+          "id": "line.charge.105",
+          "label": "도서산간 추가운임",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N105",
+          "operands": [
+            "L105",
+            "M105"
+          ]
+        },
+        {
+          "id": "line.charge.106",
+          "label": "외곽 추가운임 A",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N106",
+          "operands": [
+            "L106",
+            "M106"
+          ]
+        },
+        {
+          "id": "line.charge.107",
+          "label": "외곽 추가운임 B",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N107",
+          "operands": [
+            "L107",
+            "M107"
+          ]
+        },
+        {
+          "id": "line.charge.108",
+          "label": "반품 및 회수",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N108",
+          "operands": [
+            "L108",
+            "M108"
+          ]
+        },
+        {
+          "id": "line.charge.109",
+          "label": "별도 회수 운송",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N109",
+          "operands": [
+            "L109",
+            "M109"
+          ]
+        },
+        {
+          "id": "line.charge.110",
+          "label": "퀵·화물 운송",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N110",
+          "operands": [
+            "L110",
+            "M110"
+          ]
+        },
+        {
+          "id": "line.charge.111",
+          "label": "용차 핸들링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N111",
+          "operands": [
+            "L111",
+            "M111"
+          ]
+        },
+        {
+          "id": "line.charge.116",
+          "label": "파손 상품 보상",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N116",
+          "operands": [
+            "L116",
+            "M116"
+          ]
+        },
+        {
+          "id": "line.charge.117",
+          "label": "재출고 운임 상계",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N117",
+          "operands": [
+            "L117",
+            "M117"
+          ]
+        }
+      ],
       "limitations": [],
       "cost_items": [],
       "service_month": "2029-07",
       "service_period": {
         "state": "confirmed_by_user",
-        "start": "2029-06-26",
+        "start": "2029-07-01",
         "end": "2029-07-25",
         "origin": "synthetic_example_policy_not_customer_approval"
       },
@@ -45,11 +905,11 @@
     {
       "case_id": "demo_brand_sf_xlsb_1",
       "company_id": "demo_company",
-      "company_label": "DEMO COMPANY",
+      "company_label": "아르보코스(가상)",
       "warehouse_id": "demo_center",
-      "warehouse_label": "가상센터",
+      "warehouse_label": "솔빛센터(가상)",
       "source_path": "data/demo_company/source/claim_summary.xlsx",
-      "source_sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610",
+      "source_sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8",
       "source_format": "xlsx",
       "document_role": "claim_summary",
       "sheet_names": [
@@ -57,25 +917,885 @@
         "입고리스트",
         "B2B출고",
         "B2C출고_택배",
+        "입고 외 기타",
+        "B2B 기타",
+        "B2B 반품",
+        "B2C반품",
+        "B2C출고_용차",
         "임가공-라벨",
         "B2C출고",
-        "입고 외 기타",
-        "차감항목",
-        "반출",
-        "반품",
-        "언팩",
-        "컨테이너"
+        "반품리스트",
+        "차감항목"
       ],
       "rules": [],
       "row_rules": [],
       "aggregates": [],
-      "python_rules": [],
+      "python_rules": [
+        {
+          "id": "line.charge.20",
+          "label": "상품 입고",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N20",
+          "operands": [
+            "L20",
+            "M20"
+          ]
+        },
+        {
+          "id": "line.charge.21",
+          "label": "상품 입고",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N21",
+          "operands": [
+            "L21",
+            "M21"
+          ]
+        },
+        {
+          "id": "line.charge.22",
+          "label": "반출",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N22",
+          "operands": [
+            "L22",
+            "M22"
+          ]
+        },
+        {
+          "id": "line.charge.23",
+          "label": "라벨 교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N23",
+          "operands": [
+            "L23",
+            "M23"
+          ]
+        },
+        {
+          "id": "line.charge.24",
+          "label": "PLT 재적치",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N24",
+          "operands": [
+            "L24",
+            "M24"
+          ]
+        },
+        {
+          "id": "line.charge.25",
+          "label": "랩핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N25",
+          "operands": [
+            "L25",
+            "M25"
+          ]
+        },
+        {
+          "id": "line.charge.26",
+          "label": "상차비",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N26",
+          "operands": [
+            "L26",
+            "M26"
+          ]
+        },
+        {
+          "id": "line.charge.27",
+          "label": "수작업 하차",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N27",
+          "operands": [
+            "L27",
+            "M27"
+          ]
+        },
+        {
+          "id": "line.charge.28",
+          "label": "기본포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N28",
+          "operands": [
+            "L28",
+            "M28"
+          ]
+        },
+        {
+          "id": "line.charge.29",
+          "label": "샤쉐 포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N29",
+          "operands": [
+            "L29",
+            "M29"
+          ]
+        },
+        {
+          "id": "line.charge.30",
+          "label": "샤쉐 포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N30",
+          "operands": [
+            "L30",
+            "M30"
+          ]
+        },
+        {
+          "id": "line.charge.31",
+          "label": "추가포장",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N31",
+          "operands": [
+            "L31",
+            "M31"
+          ]
+        },
+        {
+          "id": "line.charge.32",
+          "label": "행사 선작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N32",
+          "operands": [
+            "L32",
+            "M32"
+          ]
+        },
+        {
+          "id": "line.charge.33",
+          "label": "선작업 해체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N33",
+          "operands": [
+            "L33",
+            "M33"
+          ]
+        },
+        {
+          "id": "line.charge.34",
+          "label": "BOX 피킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N34",
+          "operands": [
+            "L34",
+            "M34"
+          ]
+        },
+        {
+          "id": "line.charge.35",
+          "label": "PCS 피킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N35",
+          "operands": [
+            "L35",
+            "M35"
+          ]
+        },
+        {
+          "id": "line.charge.36",
+          "label": "수출 BOX 패킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N36",
+          "operands": [
+            "L36",
+            "M36"
+          ]
+        },
+        {
+          "id": "line.charge.37",
+          "label": "수출 PCS 패킹",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N37",
+          "operands": [
+            "L37",
+            "M37"
+          ]
+        },
+        {
+          "id": "line.charge.38",
+          "label": "분할출고 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N38",
+          "operands": [
+            "L38",
+            "M38"
+          ]
+        },
+        {
+          "id": "line.charge.39",
+          "label": "B2C 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N39",
+          "operands": [
+            "L39",
+            "M39"
+          ]
+        },
+        {
+          "id": "line.charge.40",
+          "label": "B2B 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N40",
+          "operands": [
+            "L40",
+            "M40"
+          ]
+        },
+        {
+          "id": "line.charge.41",
+          "label": "B2B 반품",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N41",
+          "operands": [
+            "L41",
+            "M41"
+          ]
+        },
+        {
+          "id": "line.charge.42",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N42",
+          "operands": [
+            "L42",
+            "M42"
+          ]
+        },
+        {
+          "id": "line.charge.43",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N43",
+          "operands": [
+            "L43",
+            "M43"
+          ]
+        },
+        {
+          "id": "line.charge.44",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N44",
+          "operands": [
+            "L44",
+            "M44"
+          ]
+        },
+        {
+          "id": "line.charge.45",
+          "label": "B2B 언팩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N45",
+          "operands": [
+            "L45",
+            "M45"
+          ]
+        },
+        {
+          "id": "line.charge.50",
+          "label": "인스펙션(B2B)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N50",
+          "operands": [
+            "L50",
+            "M50"
+          ]
+        },
+        {
+          "id": "line.charge.51",
+          "label": "라벨 부착(B2B)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N51",
+          "operands": [
+            "L51",
+            "M51"
+          ]
+        },
+        {
+          "id": "line.charge.52",
+          "label": "가상채널A 추가 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N52",
+          "operands": [
+            "L52",
+            "M52"
+          ]
+        },
+        {
+          "id": "line.charge.53",
+          "label": "가상채널B 추가 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N53",
+          "operands": [
+            "L53",
+            "M53"
+          ]
+        },
+        {
+          "id": "line.charge.54",
+          "label": "송장 추가부착(B2C)",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N54",
+          "operands": [
+            "L54",
+            "M54"
+          ]
+        },
+        {
+          "id": "line.charge.55",
+          "label": "상품교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N55",
+          "operands": [
+            "L55",
+            "M55"
+          ]
+        },
+        {
+          "id": "line.charge.56",
+          "label": "상품해체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N56",
+          "operands": [
+            "L56",
+            "M56"
+          ]
+        },
+        {
+          "id": "line.charge.57",
+          "label": "상품 라벨덧방",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N57",
+          "operands": [
+            "L57",
+            "M57"
+          ]
+        },
+        {
+          "id": "line.charge.58",
+          "label": "정합",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N58",
+          "operands": [
+            "L58",
+            "M58"
+          ]
+        },
+        {
+          "id": "line.charge.59",
+          "label": "아웃박스 교체",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N59",
+          "operands": [
+            "L59",
+            "M59"
+          ]
+        },
+        {
+          "id": "line.charge.60",
+          "label": "공용 PLT 작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N60",
+          "operands": [
+            "L60",
+            "M60"
+          ]
+        },
+        {
+          "id": "line.charge.61",
+          "label": "일반 밴딩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N61",
+          "operands": [
+            "L61",
+            "M61"
+          ]
+        },
+        {
+          "id": "line.charge.62",
+          "label": "십자 밴딩",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N62",
+          "operands": [
+            "L62",
+            "M62"
+          ]
+        },
+        {
+          "id": "line.charge.63",
+          "label": "컨테이너 쇼링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N63",
+          "operands": [
+            "L63",
+            "M63"
+          ]
+        },
+        {
+          "id": "line.charge.64",
+          "label": "컨테이너 추가작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N64",
+          "operands": [
+            "L64",
+            "M64"
+          ]
+        },
+        {
+          "id": "line.charge.65",
+          "label": "컨테이너 추가작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N65",
+          "operands": [
+            "L65",
+            "M65"
+          ]
+        },
+        {
+          "id": "line.charge.66",
+          "label": "PLT 압축",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N66",
+          "operands": [
+            "L66",
+            "M66"
+          ]
+        },
+        {
+          "id": "line.charge.67",
+          "label": "쉬핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N67",
+          "operands": [
+            "L67",
+            "M67"
+          ]
+        },
+        {
+          "id": "line.charge.68",
+          "label": "쉬핑 재작업",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N68",
+          "operands": [
+            "L68",
+            "M68"
+          ]
+        },
+        {
+          "id": "line.charge.69",
+          "label": "A구역 시설 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N69",
+          "operands": [
+            "L69",
+            "M69"
+          ]
+        },
+        {
+          "id": "line.charge.70",
+          "label": "B구역 시설 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N70",
+          "operands": [
+            "L70",
+            "M70"
+          ]
+        },
+        {
+          "id": "line.charge.71",
+          "label": "야간 인력 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N71",
+          "operands": [
+            "L71",
+            "M71"
+          ]
+        },
+        {
+          "id": "line.charge.72",
+          "label": "행사 인력 지원",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N72",
+          "operands": [
+            "L72",
+            "M72"
+          ]
+        },
+        {
+          "id": "line.charge.73",
+          "label": "폐기물 처리",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N73",
+          "operands": [
+            "L73",
+            "M73"
+          ]
+        },
+        {
+          "id": "line.charge.78",
+          "label": "포장 상자·완충재",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N78",
+          "operands": [
+            "L78",
+            "M78"
+          ]
+        },
+        {
+          "id": "line.charge.79",
+          "label": "부자재 핸들링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N79",
+          "operands": [
+            "L79",
+            "M79"
+          ]
+        },
+        {
+          "id": "line.charge.80",
+          "label": "포장기 임대",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N80",
+          "operands": [
+            "L80",
+            "M80"
+          ]
+        },
+        {
+          "id": "line.charge.81",
+          "label": "무지 라벨",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N81",
+          "operands": [
+            "L81",
+            "M81"
+          ]
+        },
+        {
+          "id": "line.charge.82",
+          "label": "수출용 PLT",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N82",
+          "operands": [
+            "L82",
+            "M82"
+          ]
+        },
+        {
+          "id": "line.charge.83",
+          "label": "공용 PLT 사용료",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N83",
+          "operands": [
+            "L83",
+            "M83"
+          ]
+        },
+        {
+          "id": "line.charge.88",
+          "label": "상품 보관 · A구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N88",
+          "operands": [
+            "L88",
+            "M88"
+          ]
+        },
+        {
+          "id": "line.charge.89",
+          "label": "상품 보관 · B구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N89",
+          "operands": [
+            "L89",
+            "M89"
+          ]
+        },
+        {
+          "id": "line.charge.90",
+          "label": "상품 보관 · C구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N90",
+          "operands": [
+            "L90",
+            "M90"
+          ]
+        },
+        {
+          "id": "line.charge.91",
+          "label": "상품 보관 · D구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N91",
+          "operands": [
+            "L91",
+            "M91"
+          ]
+        },
+        {
+          "id": "line.charge.92",
+          "label": "상품 보관 · E구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N92",
+          "operands": [
+            "L92",
+            "M92"
+          ]
+        },
+        {
+          "id": "line.charge.93",
+          "label": "상품 보관 · F구역",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N93",
+          "operands": [
+            "L93",
+            "M93"
+          ]
+        },
+        {
+          "id": "line.charge.98",
+          "label": "소형 2KG/80CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N98",
+          "operands": [
+            "L98",
+            "M98"
+          ]
+        },
+        {
+          "id": "line.charge.99",
+          "label": "중소형 5KG/100CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N99",
+          "operands": [
+            "L99",
+            "M99"
+          ]
+        },
+        {
+          "id": "line.charge.100",
+          "label": "중형 15KG/120CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N100",
+          "operands": [
+            "L100",
+            "M100"
+          ]
+        },
+        {
+          "id": "line.charge.101",
+          "label": "중대형 15KG/140CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N101",
+          "operands": [
+            "L101",
+            "M101"
+          ]
+        },
+        {
+          "id": "line.charge.102",
+          "label": "대형 20KG/160CM",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N102",
+          "operands": [
+            "L102",
+            "M102"
+          ]
+        },
+        {
+          "id": "line.charge.103",
+          "label": "특대형",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N103",
+          "operands": [
+            "L103",
+            "M103"
+          ]
+        },
+        {
+          "id": "line.charge.104",
+          "label": "규격외",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N104",
+          "operands": [
+            "L104",
+            "M104"
+          ]
+        },
+        {
+          "id": "line.charge.105",
+          "label": "도서산간 추가운임",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N105",
+          "operands": [
+            "L105",
+            "M105"
+          ]
+        },
+        {
+          "id": "line.charge.106",
+          "label": "외곽 추가운임 A",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N106",
+          "operands": [
+            "L106",
+            "M106"
+          ]
+        },
+        {
+          "id": "line.charge.107",
+          "label": "외곽 추가운임 B",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N107",
+          "operands": [
+            "L107",
+            "M107"
+          ]
+        },
+        {
+          "id": "line.charge.108",
+          "label": "반품 및 회수",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N108",
+          "operands": [
+            "L108",
+            "M108"
+          ]
+        },
+        {
+          "id": "line.charge.109",
+          "label": "별도 회수 운송",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N109",
+          "operands": [
+            "L109",
+            "M109"
+          ]
+        },
+        {
+          "id": "line.charge.110",
+          "label": "퀵·화물 운송",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N110",
+          "operands": [
+            "L110",
+            "M110"
+          ]
+        },
+        {
+          "id": "line.charge.111",
+          "label": "용차 핸들링",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N111",
+          "operands": [
+            "L111",
+            "M111"
+          ]
+        },
+        {
+          "id": "line.charge.116",
+          "label": "파손 상품 보상",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N116",
+          "operands": [
+            "L116",
+            "M116"
+          ]
+        },
+        {
+          "id": "line.charge.117",
+          "label": "재출고 운임 상계",
+          "sheet": "청구내역",
+          "kind": "product",
+          "target": "N117",
+          "operands": [
+            "L117",
+            "M117"
+          ]
+        }
+      ],
       "limitations": [],
       "cost_items": [],
       "service_month": "2029-07",
       "service_period": {
         "state": "confirmed_by_user",
-        "start": "2029-06-26",
+        "start": "2029-07-01",
         "end": "2029-07-25",
         "origin": "synthetic_example_policy_not_customer_approval"
       },

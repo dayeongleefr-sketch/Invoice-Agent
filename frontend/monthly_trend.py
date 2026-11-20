@@ -246,7 +246,7 @@ def sample_points(year):
     points = []
     for y, values in examples.items():
         for m, v in enumerate(values, 1):
-            total = Decimal(v) * 1_000_000
+            total = Decimal(v) * 140_000
             weights = {'보관료': 4400 + m % 4 * 75 + (y - year) * 50,
                        '입/출고 수수료': 3400 + m % 3 * 60,
                        '택배 및 용차 비용': 600 + m % 5 * 35,
@@ -325,7 +325,7 @@ def tooltip_html(points, month):
         return '해당 월 자료 없음'
     comparison = cost_comparison(points, month)
     text = [f'<div data-testid="monthly-cost-tooltip" style="font-size:16px;line-height:1.6;min-width:320px;color:#191F28">',
-            f'<b>{escape(month)} 청구 물류비</b> <span style="color:#6B7684">({"임의 데이터" if point.get("sample") else "실제"})</span>',
+            f'<b>{escape(month)} 청구 물류비</b> <span style="color:#6B7684">({"임의 데이터" if point.get("sample") else "가상 원본 계산"})</span>',
             f'<div style="font-size:22px;font-weight:600;margin:4px 0 12px">{money_html(point["amount"])}</div>']
     if comparison['entries']:
         text.append('<table style="width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums">'
@@ -463,7 +463,7 @@ def render_trend(root, july_month=None, july_amount=None, july_categories=None):
         with ui.row().classes('w-full items-center justify-between gap-2'):
             ui.label('월별 청구 물류비').classes('section-title')
             with ui.row().classes('items-center gap-3'):
-                demo_badge = ui.label('임의 데이터 포함').classes('trend-sample-badge').props('data-testid=trend-sample-badge')
+                demo_badge = ui.label('가상 월별 추이').classes('trend-sample-badge').props('data-testid=trend-sample-badge')
                 year = ui.select([], label='연도').props('outlined dense data-testid=trend-year').classes('w-32')
         content = ui.column().classes('w-full gap-2 monthly-trend-content')
 
@@ -517,7 +517,7 @@ def render_trend(root, july_month=None, july_amount=None, july_categories=None):
                     }
                 }''')
                 description = ' · '.join(
-                    f"{p['month']}: {exact_won(p['amount'])}원 ({'임의 데이터' if p.get('sample') else '실제'})"
+                    f"{p['month']}: {exact_won(p['amount'])}원 ({'임의 데이터' if p.get('sample') else '가상 원본 계산'})"
                     for p in points if p['month'][:4] in visible_years)
                 chart._props.update({'role': 'img', 'aria-label': description})
             else:

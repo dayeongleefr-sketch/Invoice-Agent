@@ -17,7 +17,7 @@ from wms_tools import xlsx_rows, day
 from invoice_tools import digest
 
 BASE = Path('data/demo_company/derived')
-MASTERS = {'master': {'path': 'data/demo_company/source/master.xlsx', 'sha256': '2A4BAF6C99FA4A098A32B42F4241AD017407A1B6F14DC3090EC02F5F59D449B7'}, 'master_reply': {'path': 'data/demo_company/source/master_reply.xlsx', 'sha256': '2A4BAF6C99FA4A098A32B42F4241AD017407A1B6F14DC3090EC02F5F59D449B7'}}
+MASTERS = {'master': {'path': 'data/demo_company/source/master.xlsx', 'sha256': 'CA697414949E18F5FAA362BF70E3D529D51A69C73F6F1741F25CCBAE56B727AF'}, 'master_reply': {'path': 'data/demo_company/source/master_reply.xlsx', 'sha256': 'CA697414949E18F5FAA362BF70E3D529D51A69C73F6F1741F25CCBAE56B727AF'}}
 SUMMARY = {20:('입고리스트','L','BOX'),21:('입고리스트','M','PCS'),
            34:('B2B출고','L','BOX픽킹'),35:('B2B출고','M','PCS픽킹'),
            36:('B2B출고','N','BOX팩킹'),37:('B2B출고','O','PCS팩킹')}

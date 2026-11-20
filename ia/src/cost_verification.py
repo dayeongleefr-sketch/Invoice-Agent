@@ -16,8 +16,8 @@ from xlsb_scan import scan_rows
 from identifier_tools import stored_number, billable_amount
 
 CONTRACT = 'data/demo_company/source/contract.pdf'
-CONTRACT_HASH = 'EB4934984744523DA1E858027707562EA2CA5CAA537DE905CB8D1A63A9318761'
-RATES = {20:7,21:3,26:13,28:11,29:5,31:2,34:7,35:3,36:7,37:3,39:7,40:7,50:23,51:4,60:23,61:31,63:47}
+CONTRACT_HASH = '25F1FC25200D9B56CB371AF502DD04B0BAC3D6675EE1BD98AF0750FF4E2053C5'
+RATES = {20: 280, 21: 35, 26: 2300, 28: 900, 29: 110, 31: 150, 34: 420, 35: 65, 36: 480, 37: 80, 39: 1300, 40: 450, 50: 12000, 51: 120, 60: 3800, 61: 2800, 63: 85000}
 ACTUAL_COST_ROWS = (69, 70, 71, 73, 78, 80, 83, 105, 108, 110, 116)
 
 
@@ -183,7 +183,7 @@ def run(root):
                 'wms_cost_unit': source['wms_cost_unit'], 'evidence': [f'청구내역!L{row}:N{row}']}
         if row in RATES:
             rc = comparison(f'cost.contract_rate.{row}', Decimal(RATES[row]), price,
-                            [CONTRACT + '#page=6', f'청구내역!L{row}'], source['item_context'] + ' 기재 단가')
+                            [CONTRACT + '#page=1', f'청구내역!L{row}'], source['item_context'] + ' 기재 단가')
             rc['unit'] = 'KRW per stated cost unit'
             rc['applicability_confirmed'] = False
             checks.append(rc)

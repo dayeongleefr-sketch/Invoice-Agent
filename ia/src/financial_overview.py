@@ -279,7 +279,7 @@ def load_overview(root, rows):
 def build_overview(rows, full, cost, sheets, totals, workflow, supporting=None):
     items = {i['row']: i for i in full['claim_items'] if number(i.get('amount')) not in (None, Decimal(0))}
     # The SF invoice explicitly subtracts the credit section before VAT.
-    signed = {n: number(i['amount']) * (-1 if '차감' in i.get('section', '') else 1)
+    signed = {n: (-abs(number(i['amount'])) if '차감' in i.get('section', '') else number(i['amount']))
               for n, i in items.items()}
     if sum(signed.values(), Decimal(0)) != totals['net']:
         raise ValueError('비용 항목 합계와 차감 후 공급가액이 달라 금액 비중을 계산하지 않았습니다.')

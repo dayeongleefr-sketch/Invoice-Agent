@@ -1,0 +1,801 @@
+{
+  "synthetic_only": true,
+  "month": "2029-07",
+  "company": "아르보코스",
+  "warehouse": "솔빛센터",
+  "invoice_lines": 78,
+  "inbound_lines": 120,
+  "b2b_orders": 240,
+  "b2c_parcels": 2400,
+  "wms_rows": 2645,
+  "products": 12,
+  "gross": 143675975,
+  "credits": -327000,
+  "supply_amount": 143348975,
+  "vat": 14334898,
+  "total_with_vat": 157683873,
+  "scenarios": [
+    {
+      "order": "DEMO-B2B-00013",
+      "type": "소모품 제외 시 일치",
+      "claim": 3509,
+      "wms": 3533,
+      "difference": -24,
+      "consumable_quantity": 24
+    },
+    {
+      "order": "DEMO-B2B-00030",
+      "type": "WMS 미연결",
+      "claim": 5133,
+      "wms": null,
+      "difference": null
+    },
+    {
+      "order": "DEMO-B2B-00053",
+      "type": "일반 상품 수량 차이",
+      "claim": 1876,
+      "wms": 1924,
+      "difference": -48
+    },
+    {
+      "order": "DEMO-B2B-00068",
+      "type": "소모품 제외 시 일치",
+      "claim": 12647,
+      "wms": 12671,
+      "difference": -24,
+      "consumable_quantity": 24
+    },
+    {
+      "order": "DEMO-B2B-00087",
+      "type": "일반 상품 수량 차이",
+      "claim": 3595,
+      "wms": 3571,
+      "difference": 24
+    },
+    {
+      "order": "DEMO-B2B-00114",
+      "type": "WMS 미연결",
+      "claim": 3304,
+      "wms": null,
+      "difference": null
+    },
+    {
+      "order": "DEMO-B2B-00147",
+      "type": "소모품 제외 시 일치",
+      "claim": 5086,
+      "wms": 5110,
+      "difference": -24,
+      "consumable_quantity": 24
+    },
+    {
+      "order": "DEMO-B2B-00179",
+      "type": "일반 상품 수량 차이",
+      "claim": 4600,
+      "wms": 4648,
+      "difference": -48
+    },
+    {
+      "order": "DEMO-B2B-00206",
+      "type": "일반 상품 수량 차이",
+      "claim": 5334,
+      "wms": 5310,
+      "difference": 24
+    },
+    {
+      "order": "DEMO-B2B-00215",
+      "type": "소모품 제외 시 일치",
+      "claim": 10780,
+      "wms": 10804,
+      "difference": -24,
+      "consumable_quantity": 24
+    }
+  ],
+  "costs": [
+    {
+      "row": 20,
+      "category": "입고비",
+      "label": "상품 입고",
+      "unit": "BOX",
+      "rate": 280,
+      "quantity": 38716,
+      "amount": 10840480
+    },
+    {
+      "row": 21,
+      "category": "입고비",
+      "label": "상품 입고",
+      "unit": "PCS",
+      "rate": 35,
+      "quantity": 1904,
+      "amount": 66640
+    },
+    {
+      "row": 22,
+      "category": "입고비",
+      "label": "반출",
+      "unit": "PLT",
+      "rate": 2600,
+      "quantity": 70,
+      "amount": 182000
+    },
+    {
+      "row": 23,
+      "category": "입고비",
+      "label": "라벨 교체",
+      "unit": "BOX",
+      "rate": 180,
+      "quantity": 287,
+      "amount": 51660
+    },
+    {
+      "row": 24,
+      "category": "입고비",
+      "label": "PLT 재적치",
+      "unit": "BOX",
+      "rate": 150,
+      "quantity": 481,
+      "amount": 72150
+    },
+    {
+      "row": 25,
+      "category": "입고비",
+      "label": "랩핑 재작업",
+      "unit": "PLT",
+      "rate": 2100,
+      "quantity": 119,
+      "amount": 249900
+    },
+    {
+      "row": 26,
+      "category": "상/하차비",
+      "label": "상차비",
+      "unit": "PLT",
+      "rate": 2300,
+      "quantity": 1211,
+      "amount": 2785300
+    },
+    {
+      "row": 27,
+      "category": "상/하차비",
+      "label": "수작업 하차",
+      "unit": "1톤",
+      "rate": 54000,
+      "quantity": 24,
+      "amount": 1296000
+    },
+    {
+      "row": 28,
+      "category": "B2C 작업비",
+      "label": "기본포장",
+      "unit": "1~3EA",
+      "rate": 900,
+      "quantity": 2400,
+      "amount": 2160000
+    },
+    {
+      "row": 29,
+      "category": "B2C 작업비",
+      "label": "샤쉐 포장",
+      "unit": "3종 SET",
+      "rate": 110,
+      "quantity": 7200,
+      "amount": 792000
+    },
+    {
+      "row": 30,
+      "category": "B2C 작업비",
+      "label": "샤쉐 포장",
+      "unit": "5종 OPP",
+      "rate": 160,
+      "quantity": 3600,
+      "amount": 576000
+    },
+    {
+      "row": 31,
+      "category": "B2C 작업비",
+      "label": "추가포장",
+      "unit": "추가 EA",
+      "rate": 150,
+      "quantity": 2400,
+      "amount": 360000
+    },
+    {
+      "row": 32,
+      "category": "B2C 작업비",
+      "label": "행사 선작업",
+      "unit": "SET",
+      "rate": 460,
+      "quantity": 4800,
+      "amount": 2208000
+    },
+    {
+      "row": 33,
+      "category": "B2C 작업비",
+      "label": "선작업 해체",
+      "unit": "SET",
+      "rate": 180,
+      "quantity": 900,
+      "amount": 162000
+    },
+    {
+      "row": 34,
+      "category": "B2B 작업비",
+      "label": "BOX 피킹",
+      "unit": "BOX",
+      "rate": 420,
+      "quantity": 35558,
+      "amount": 14934360
+    },
+    {
+      "row": 35,
+      "category": "B2B 작업비",
+      "label": "PCS 피킹",
+      "unit": "PCS",
+      "rate": 65,
+      "quantity": 4062,
+      "amount": 264030
+    },
+    {
+      "row": 36,
+      "category": "B2B 작업비",
+      "label": "수출 BOX 패킹",
+      "unit": "BOX",
+      "rate": 480,
+      "quantity": 35558,
+      "amount": 17067840
+    },
+    {
+      "row": 37,
+      "category": "B2B 작업비",
+      "label": "수출 PCS 패킹",
+      "unit": "PCS",
+      "rate": 80,
+      "quantity": 4062,
+      "amount": 324960
+    },
+    {
+      "row": 38,
+      "category": "B2B 작업비",
+      "label": "분할출고 작업",
+      "unit": "BOX",
+      "rate": 240,
+      "quantity": 360,
+      "amount": 86400
+    },
+    {
+      "row": 39,
+      "category": "반품 작업비",
+      "label": "B2C 반품",
+      "unit": "BOX",
+      "rate": 1300,
+      "quantity": 84,
+      "amount": 109200
+    },
+    {
+      "row": 40,
+      "category": "반품 작업비",
+      "label": "B2B 반품",
+      "unit": "BOX",
+      "rate": 450,
+      "quantity": 200,
+      "amount": 90000
+    },
+    {
+      "row": 41,
+      "category": "반품 작업비",
+      "label": "B2B 반품",
+      "unit": "PCS",
+      "rate": 85,
+      "quantity": 21,
+      "amount": 1785
+    },
+    {
+      "row": 42,
+      "category": "언팩 작업비",
+      "label": "B2B 언팩",
+      "unit": "1,000 PCS 이하",
+      "rate": 18000,
+      "quantity": 20,
+      "amount": 360000
+    },
+    {
+      "row": 43,
+      "category": "언팩 작업비",
+      "label": "B2B 언팩",
+      "unit": "1,001~2,000 PCS",
+      "rate": 26000,
+      "quantity": 22,
+      "amount": 572000
+    },
+    {
+      "row": 44,
+      "category": "언팩 작업비",
+      "label": "B2B 언팩",
+      "unit": "2,001~3,000 PCS",
+      "rate": 34000,
+      "quantity": 21,
+      "amount": 714000
+    },
+    {
+      "row": 45,
+      "category": "언팩 작업비",
+      "label": "B2B 언팩",
+      "unit": "3,000 PCS 초과",
+      "rate": 46000,
+      "quantity": 19,
+      "amount": 874000
+    },
+    {
+      "row": 50,
+      "category": "임가공비",
+      "label": "인스펙션(B2B)",
+      "unit": "PLT",
+      "rate": 12000,
+      "quantity": 54,
+      "amount": 648000
+    },
+    {
+      "row": 51,
+      "category": "임가공비",
+      "label": "라벨 부착(B2B)",
+      "unit": "라벨",
+      "rate": 120,
+      "quantity": 11836,
+      "amount": 1420320
+    },
+    {
+      "row": 52,
+      "category": "임가공비",
+      "label": "가상채널A 추가 작업",
+      "unit": "BOX",
+      "rate": 250,
+      "quantity": 9132,
+      "amount": 2283000
+    },
+    {
+      "row": 53,
+      "category": "임가공비",
+      "label": "가상채널B 추가 작업",
+      "unit": "BOX",
+      "rate": 280,
+      "quantity": 2400,
+      "amount": 672000
+    },
+    {
+      "row": 54,
+      "category": "임가공비",
+      "label": "송장 추가부착(B2C)",
+      "unit": "BOX",
+      "rate": 100,
+      "quantity": 516,
+      "amount": 51600
+    },
+    {
+      "row": 55,
+      "category": "임가공비",
+      "label": "상품교체",
+      "unit": "PCS",
+      "rate": 220,
+      "quantity": 1800,
+      "amount": 432000
+    },
+    {
+      "row": 56,
+      "category": "임가공비",
+      "label": "상품해체",
+      "unit": "PCS",
+      "rate": 160,
+      "quantity": 2400,
+      "amount": 384000
+    },
+    {
+      "row": 57,
+      "category": "임가공비",
+      "label": "상품 라벨덧방",
+      "unit": "EA",
+      "rate": 65,
+      "quantity": 23760,
+      "amount": 1544400
+    },
+    {
+      "row": 58,
+      "category": "임가공비",
+      "label": "정합",
+      "unit": "EA",
+      "rate": 180,
+      "quantity": 8640,
+      "amount": 1555200
+    },
+    {
+      "row": 59,
+      "category": "임가공비",
+      "label": "아웃박스 교체",
+      "unit": "BOX",
+      "rate": 320,
+      "quantity": 1200,
+      "amount": 384000
+    },
+    {
+      "row": 60,
+      "category": "임가공비",
+      "label": "공용 PLT 작업",
+      "unit": "PLT",
+      "rate": 3800,
+      "quantity": 232,
+      "amount": 881600
+    },
+    {
+      "row": 61,
+      "category": "임가공비",
+      "label": "일반 밴딩",
+      "unit": "PLT",
+      "rate": 2800,
+      "quantity": 167,
+      "amount": 467600
+    },
+    {
+      "row": 62,
+      "category": "임가공비",
+      "label": "십자 밴딩",
+      "unit": "PLT",
+      "rate": 4200,
+      "quantity": 93,
+      "amount": 390600
+    },
+    {
+      "row": 63,
+      "category": "임가공비",
+      "label": "컨테이너 쇼링",
+      "unit": "컨테이너",
+      "rate": 85000,
+      "quantity": 12,
+      "amount": 1020000
+    },
+    {
+      "row": 64,
+      "category": "임가공비",
+      "label": "컨테이너 추가작업",
+      "unit": "20FT",
+      "rate": 110000,
+      "quantity": 7,
+      "amount": 770000
+    },
+    {
+      "row": 65,
+      "category": "임가공비",
+      "label": "컨테이너 추가작업",
+      "unit": "40FT",
+      "rate": 180000,
+      "quantity": 5,
+      "amount": 900000
+    },
+    {
+      "row": 66,
+      "category": "임가공비",
+      "label": "PLT 압축",
+      "unit": "PLT",
+      "rate": 3200,
+      "quantity": 46,
+      "amount": 147200
+    },
+    {
+      "row": 67,
+      "category": "임가공비",
+      "label": "쉬핑 재작업",
+      "unit": "PLT",
+      "rate": 2600,
+      "quantity": 36,
+      "amount": 93600
+    },
+    {
+      "row": 68,
+      "category": "임가공비",
+      "label": "쉬핑 재작업",
+      "unit": "BOX",
+      "rate": 150,
+      "quantity": 245,
+      "amount": 36750
+    },
+    {
+      "row": 69,
+      "category": "운영 지원",
+      "label": "A구역 시설 지원",
+      "unit": "건",
+      "rate": 650000,
+      "quantity": 1,
+      "amount": 650000
+    },
+    {
+      "row": 70,
+      "category": "운영 지원",
+      "label": "B구역 시설 지원",
+      "unit": "건",
+      "rate": 420000,
+      "quantity": 1,
+      "amount": 420000
+    },
+    {
+      "row": 71,
+      "category": "운영 지원",
+      "label": "야간 인력 지원",
+      "unit": "인일",
+      "rate": 160000,
+      "quantity": 16,
+      "amount": 2560000
+    },
+    {
+      "row": 72,
+      "category": "운영 지원",
+      "label": "행사 인력 지원",
+      "unit": "인일",
+      "rate": 145000,
+      "quantity": 12,
+      "amount": 1740000
+    },
+    {
+      "row": 73,
+      "category": "운영 지원",
+      "label": "폐기물 처리",
+      "unit": "KG",
+      "rate": 1200,
+      "quantity": 480,
+      "amount": 576000
+    },
+    {
+      "row": 78,
+      "category": "부자재",
+      "label": "포장 상자·완충재",
+      "unit": "EA",
+      "rate": 420,
+      "quantity": 24000,
+      "amount": 10080000
+    },
+    {
+      "row": 79,
+      "category": "부자재",
+      "label": "부자재 핸들링",
+      "unit": "원",
+      "rate": 0.05,
+      "quantity": 10080000,
+      "amount": 504000
+    },
+    {
+      "row": 80,
+      "category": "부자재",
+      "label": "포장기 임대",
+      "unit": "월",
+      "rate": 680000,
+      "quantity": 1,
+      "amount": 680000
+    },
+    {
+      "row": 81,
+      "category": "부자재",
+      "label": "무지 라벨",
+      "unit": "장",
+      "rate": 18,
+      "quantity": 42000,
+      "amount": 756000
+    },
+    {
+      "row": 82,
+      "category": "부자재",
+      "label": "수출용 PLT",
+      "unit": "PLT",
+      "rate": 18500,
+      "quantity": 180,
+      "amount": 3330000
+    },
+    {
+      "row": 83,
+      "category": "부자재",
+      "label": "공용 PLT 사용료",
+      "unit": "PLT",
+      "rate": 2400,
+      "quantity": 340,
+      "amount": 816000
+    },
+    {
+      "row": 88,
+      "category": "보관비",
+      "label": "상품 보관 · A구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 860,
+      "amount": 10750000
+    },
+    {
+      "row": 89,
+      "category": "보관비",
+      "label": "상품 보관 · B구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 720,
+      "amount": 9000000
+    },
+    {
+      "row": 90,
+      "category": "보관비",
+      "label": "상품 보관 · C구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 480,
+      "amount": 6000000
+    },
+    {
+      "row": 91,
+      "category": "보관비",
+      "label": "상품 보관 · D구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 360,
+      "amount": 4500000
+    },
+    {
+      "row": 92,
+      "category": "보관비",
+      "label": "상품 보관 · E구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 240,
+      "amount": 3000000
+    },
+    {
+      "row": 93,
+      "category": "보관비",
+      "label": "상품 보관 · F구역",
+      "unit": "㎡/월",
+      "rate": 12500,
+      "quantity": 180,
+      "amount": 2250000
+    },
+    {
+      "row": 98,
+      "category": "신용 택배",
+      "label": "소형 2KG/80CM",
+      "unit": "건",
+      "rate": 2900,
+      "quantity": 1500,
+      "amount": 4350000
+    },
+    {
+      "row": 99,
+      "category": "신용 택배",
+      "label": "중소형 5KG/100CM",
+      "unit": "건",
+      "rate": 3400,
+      "quantity": 530,
+      "amount": 1802000
+    },
+    {
+      "row": 100,
+      "category": "신용 택배",
+      "label": "중형 15KG/120CM",
+      "unit": "건",
+      "rate": 4200,
+      "quantity": 180,
+      "amount": 756000
+    },
+    {
+      "row": 101,
+      "category": "신용 택배",
+      "label": "중대형 15KG/140CM",
+      "unit": "건",
+      "rate": 4800,
+      "quantity": 90,
+      "amount": 432000
+    },
+    {
+      "row": 102,
+      "category": "신용 택배",
+      "label": "대형 20KG/160CM",
+      "unit": "건",
+      "rate": 5600,
+      "quantity": 55,
+      "amount": 308000
+    },
+    {
+      "row": 103,
+      "category": "신용 택배",
+      "label": "특대형",
+      "unit": "건",
+      "rate": 7200,
+      "quantity": 30,
+      "amount": 216000
+    },
+    {
+      "row": 104,
+      "category": "신용 택배",
+      "label": "규격외",
+      "unit": "건",
+      "rate": 8800,
+      "quantity": 15,
+      "amount": 132000
+    },
+    {
+      "row": 105,
+      "category": "택배·용차",
+      "label": "도서산간 추가운임",
+      "unit": "건",
+      "rate": 3000,
+      "quantity": 32,
+      "amount": 96000
+    },
+    {
+      "row": 106,
+      "category": "택배·용차",
+      "label": "외곽 추가운임 A",
+      "unit": "건",
+      "rate": 1500,
+      "quantity": 46,
+      "amount": 69000
+    },
+    {
+      "row": 107,
+      "category": "택배·용차",
+      "label": "외곽 추가운임 B",
+      "unit": "건",
+      "rate": 2200,
+      "quantity": 18,
+      "amount": 39600
+    },
+    {
+      "row": 108,
+      "category": "택배·용차",
+      "label": "반품 및 회수",
+      "unit": "건",
+      "rate": 3200,
+      "quantity": 84,
+      "amount": 268800
+    },
+    {
+      "row": 109,
+      "category": "택배·용차",
+      "label": "별도 회수 운송",
+      "unit": "건",
+      "rate": 85000,
+      "quantity": 12,
+      "amount": 1020000
+    },
+    {
+      "row": 110,
+      "category": "택배·용차",
+      "label": "퀵·화물 운송",
+      "unit": "원",
+      "rate": 1,
+      "quantity": 5040000,
+      "amount": 5040000
+    },
+    {
+      "row": 111,
+      "category": "택배·용차",
+      "label": "용차 핸들링",
+      "unit": "원",
+      "rate": 0.05,
+      "quantity": 5040000,
+      "amount": 252000
+    },
+    {
+      "row": 116,
+      "category": "차감 비용",
+      "label": "파손 상품 보상",
+      "unit": "건",
+      "rate": -240000,
+      "quantity": 1,
+      "amount": -240000
+    },
+    {
+      "row": 117,
+      "category": "차감 비용",
+      "label": "재출고 운임 상계",
+      "unit": "건",
+      "rate": -2900,
+      "quantity": 30,
+      "amount": -87000
+    }
+  ],
+  "notes": [
+    "모든 자료는 독립 생성한 가상 데이터이며 실제 고객 자료·승인을 가져오지 않았습니다.",
+    "청구 산술 차이 36,000원(상품교체), 작업량 차이 12EA(상품해체), 소모품 24EA 차이 4건, 증빙 미확인 예시를 의도적으로 유지합니다."
+  ]
+}

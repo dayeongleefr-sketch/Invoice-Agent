@@ -5,11 +5,11 @@
   "sources": {
     "claim": {
       "path": "data/demo_company/source/claim.xlsx",
-      "sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610"
+      "sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8"
     },
     "claim_summary": {
       "path": "data/demo_company/source/claim_summary.xlsx",
-      "sha256": "0D74E266DCBBFF489C951D43444BD164CAA87198F03427122178B6A69CB87610"
+      "sha256": "3A445FB705949428C04797E6C47C0438E688AD20688150A72A22CA11115C1CA8"
     },
     "inbound_h1": {
       "path": "data/demo_company/source/inbound_h1.xlsx",
@@ -21,11 +21,11 @@
     },
     "inbound_july": {
       "path": "data/demo_company/source/inbound_july.xlsx",
-      "sha256": "9544A483C79AC4EAEAF39A306015BBC0042E2EED52B502EC89B5BCDE1C966DA0"
+      "sha256": "3D186B092C1AC894EDFBFF29998D5D137AC1C3BCC8FCD42416339A54184F2729"
     },
     "outbound_july": {
       "path": "data/demo_company/source/outbound_july.csv",
-      "sha256": "3B7ED1851CBD857314AE51505D89E0DE39F55802B950B2551EEBB95B593AD6F0"
+      "sha256": "A89C961BEAE339B6C51CDC0794DBCB8D7AD406A8012A5477C77F6041064BC880"
     }
   },
   "claim_mappings": {
